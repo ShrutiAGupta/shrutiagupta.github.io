@@ -1356,6 +1356,11 @@ section {
   overflow: hidden;
 }
 
+.main-content .container-main .block-main img{
+  max-width: 100%;
+}
+
+
 .container-main .block-main .content-main {
   background: #fff none repeat scroll 0 0;
   display: inline-block;
