@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(Observer);
 
     const sections = gsap.utils.toArray(".panel");
 
