@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+  --sidebar-width: 60px;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #5a656e;
@@ -1780,4 +1784,99 @@ blockquote {
     display: inline-block;
     margin-right: 0;
   }
+}
+
+body.portfolio-1 {
+  overflow-x: hidden;
+  /* padding-top: 60px; */
+}
+
+#main.portfolio {
+  margin: 0;
+  /* margin-top: 60px; */
+  height: 100vh
+}
+
+#main.portfolio .container {
+  display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--sidebar-width);
+    overflow-x: hidden;
+    max-width: none;
+    width: calc(300vw - var(--sidebar-width));
+}
+
+#main.portfolio .panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 2em;
+  color: #fff;
+  margin:0
+}
+
+#main.portfolio .wine {
+  background: #823038;
+  width: calc(100vw - var(--sidebar-width) * 3);
+  z-index: 1;
+}
+
+#main.portfolio .chocolate {
+  background: #592127;
+  width: calc(100vw - var(--sidebar-width) * 2);
+  z-index: 2;
+}
+
+#main.portfolio .coffee {
+  background: #6f4e37;
+  width: calc(100vw - var(--sidebar-width));
+  z-index: 3;
+}
+
+#main.portfolio .rotate-90 {
+  display: inline-block;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#main.portfolio .sidebars__list {
+  list-style: none;
+  font-size: 0px;
+}
+
+#main.portfolio .vertical-bar {
+  width: var(--sidebar-width);
+  /* height: 100%; */
+  position: fixed;
+  font-size: 1.25em;
+  font-size: 16px;
+  color: #fff;
+  top: 0;
+  /* height: calc(100vh - 60px); */
+  height:100vh;
+    /* height: 100%; */
+    /* margin-top: 60px; */
+    z-index: 10
+}
+
+#main.portfolio .vertical-bar__wine {
+  background-color: #270e10;
+  left: 0;
+}
+
+#main.portfolio .vertical-bar__chocolate {
+  background-color: #110607;
+  right: var(--sidebar-width);
+}
+
+#main.portfolio .vertical-bar__coffee {
+  background-color: #333;
+  right: 0;
+  opacity: 0.5;
 }
