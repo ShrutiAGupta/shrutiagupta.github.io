@@ -1,1 +1,0 @@
-# ShrutiAGupta.github.io
