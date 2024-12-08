@@ -1,0 +1,19 @@
+// _variables.scss
+:root {
+    --primary: #b8a07e;
+    --primary-100: #b8a07e;
+    --primary-80: #D5C5AF;
+    --sidebar-width: 60px;
+    // --primary: #3B82F6;
+    // --primary-700: #1D4ED8;
+    // --primary-900: #1E3A8A;
+  }
+  
+  // Usage in components
+  .button {
+    background-color: var(--primary);
+    
+    &:hover {
+    //   background-color: var(--primary-700);
+    }
+  }

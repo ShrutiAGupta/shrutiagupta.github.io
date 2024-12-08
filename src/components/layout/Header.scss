@@ -1,0 +1,79 @@
+@import '../../styles/__variables';
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 997;
+    padding: 20px 0;
+    background: transparent;
+    transition: all 0.5s ease;
+    
+    &.header-scrolled {
+      position: fixed;
+    top: 0;
+    background: #fff;
+    padding: 12px 0;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo .img-fluid {
+    height: 50px;
+  }
+}
+  
+  /* Rest of your header styles remain the same */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #888888;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover, 
+  .navbar .active {
+    color: var(--primary);
+    // text-decoration: none;
+  }
+  
+  /* Mobile navigation styles */
+  .mobile-nav-toggle {
+    display: none;
+    color: #222222;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+  }
+
+  // Header.scss
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }

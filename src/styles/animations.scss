@@ -1,0 +1,36 @@
+/* src/styles/animations.css */
+.scroll-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+  }
+  
+  .scroll-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Different animations for different sections */
+  .scroll-section.fade-right {
+    transform: translateX(-20px);
+  }
+  
+  .scroll-section.fade-right.animate {
+    transform: translateX(0);
+  }
+  
+  .scroll-section.fade-left {
+    transform: translateX(20px);
+  }
+  
+  .scroll-section.fade-left.animate {
+    transform: translateX(0);
+  }
+  
+  .scroll-section.zoom {
+    transform: scale(0.95);
+  }
+  
+  .scroll-section.zoom.animate {
+    transform: scale(1);
+  }

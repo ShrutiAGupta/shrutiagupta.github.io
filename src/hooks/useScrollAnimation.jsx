@@ -1,0 +1,34 @@
+import { useEffect, useRef } from 'react';
+
+const useScrollAnimation = (options = {}) => {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      },
+      {
+        threshold: 0.1,
+        ...options
+      }
+    );
+
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, [options]);
+
+  return elementRef;
+};
+
+export default useScrollAnimation;
