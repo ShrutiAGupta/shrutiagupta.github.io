@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ShrutiAGupta.github.io/static/css/main.18620a73.css",
+    "main.js": "/ShrutiAGupta.github.io/static/js/main.377cffe8.js",
+    "static/media/hero-bg.jpg": "/ShrutiAGupta.github.io/static/media/hero-bg.873e99d4cca32502a522.jpg",
+    "index.html": "/ShrutiAGupta.github.io/index.html",
+    "main.18620a73.css.map": "/ShrutiAGupta.github.io/static/css/main.18620a73.css.map",
+    "main.377cffe8.js.map": "/ShrutiAGupta.github.io/static/js/main.377cffe8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18620a73.css",
+    "static/js/main.377cffe8.js"
+  ]
+}
