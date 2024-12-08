@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/shrutiagupta.github.io/static/css/main.b2e7fccf.css",
-    "main.js": "/shrutiagupta.github.io/static/js/main.377cffe8.js",
-    "static/media/hero-bg.jpg": "/shrutiagupta.github.io/static/media/hero-bg.873e99d4cca32502a522.jpg",
-    "index.html": "/shrutiagupta.github.io/index.html",
-    "main.b2e7fccf.css.map": "/shrutiagupta.github.io/static/css/main.b2e7fccf.css.map",
-    "main.377cffe8.js.map": "/shrutiagupta.github.io/static/js/main.377cffe8.js.map"
+    "main.css": "/static/css/main.1e42b172.css",
+    "main.js": "/static/js/main.377cffe8.js",
+    "static/media/hero-bg.jpg": "/static/media/hero-bg.873e99d4cca32502a522.jpg",
+    "index.html": "/index.html",
+    "main.1e42b172.css.map": "/static/css/main.1e42b172.css.map",
+    "main.377cffe8.js.map": "/static/js/main.377cffe8.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2e7fccf.css",
+    "static/css/main.1e42b172.css",
     "static/js/main.377cffe8.js"
   ]
 }
