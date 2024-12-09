@@ -52,3 +52,20 @@
       }
     }
   }
+
+.blog-post{
+  ul, ol {
+    list-style: unset !important;
+    margin: unset;
+    // padding: unset;
+    text-decoration: unset;
+    height: fit-content;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px !important;
+     li {
+        text-decoration: none;
+     }
+  }
+}
