@@ -6,3 +6,13 @@
         object-position: top;
     }
 }
+
+@media (max-width: 991px) {
+    .post .post-image {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

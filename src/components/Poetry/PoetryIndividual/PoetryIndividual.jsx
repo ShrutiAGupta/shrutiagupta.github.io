@@ -41,7 +41,7 @@ const PoetryIndividual = () => {
     <article className="post no-copy">
       <div className="container">
 
-        <div className="post-content justify-between flex">
+        <div className="post-content justify-between flex flex-wrap">
           <img 
             src={poetry.image} 
             alt={poetry.title} 
