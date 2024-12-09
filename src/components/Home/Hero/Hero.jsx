@@ -28,11 +28,13 @@ const Hero = () => {
 
   return (
     <section id="hero" className="flex flex-column items-center justify-center">
+      <div className="hero-content">
       <h1>Hi, I'm Shruti!</h1>
       <h2>I am a <span ref={typedRef}></span></h2>
       <a className="btn-get-started scrollto" onClick={() => scrollToSection('me')}>
         <i className="bi bi-chevron-double-down"></i>
       </a>
+      </div>
     </section>
   );
 };
