@@ -1,9 +1,16 @@
-.poetry-block {
+/* src/components/Blog/Blog.scss */
+@import '../../../styles/__variables';
+#blog {
+    // padding-top: 80px;
+    // padding-bottom: 80px;
+  }
+  
+  .blog-block {
     display: inline-block;
     width: 100%;
   }
   
-  .poetry-info {
+  .blog-info {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -11,34 +18,34 @@
     transition: all 0.3s ease;
   }
   
-  .poetry-info:hover {
+  .blog-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .poetry-info img {
+  .blog-info img {
     width: 100%;
     height: 250px;
     object-fit: cover;
   }
   
-  .poetry-txt {
+  .blog-txt {
     padding: 25px;
   }
   
-  .poetry-txt h4 {
+  .blog-txt h4 {
     font-size: 19px;
     margin-bottom: 15px;
     font-weight: 600;
   }
   
-  .poetry-txt h4 a {
+  .blog-txt h4 a {
     color: #222;
     text-decoration: none;
     transition: all 0.3s ease;
   }
   
-  .poetry-txt h4 a:hover {
+  .blog-txt h4 a:hover {
     color: var(--primary);
   }
   
@@ -48,16 +55,16 @@
   }
   
   @media (max-width: 768px) {
-    #poetry {
+    #blog {
       padding-top: 60px;
       padding-bottom: 60px;
     }
   
-    .poetry-info img {
+    .blog-info img {
       height: 200px;
     }
   
-    .poetry-txt h4 {
+    .blog-txt h4 {
       font-size: 17px;
     }
   }

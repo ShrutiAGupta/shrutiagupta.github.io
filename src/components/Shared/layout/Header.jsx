@@ -11,85 +11,59 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
       setIsSticky(window.scrollY > heroHeight - 100);
 
-      const sections = ["hero", "about", "skills", "resume", "blog", "contact"];
-      const scrollPosition = window.scrollY + 100;
+      // const sections = ["hero", "about", "skills", "resume", "blog", "contact"];
+      // const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      // for (const section of sections) {
+      //   const element = document.getElementById(section);
+      //   if (element) {
+      //     const { offsetTop, offsetHeight } = element;
+      //     if (
+      //       scrollPosition >= offsetTop &&
+      //       scrollPosition < offsetTop + offsetHeight
+      //     ) {
+      //       setActiveSection(section);
+      //       break;
+      //     }
+      //   }
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [setActiveSection]); // Add setActiveSection to dependencies
+  }); // Add setActiveSection to dependencies
 
   const navItems = [
     { id: "hero", path: "/", label: "Home", type: "scroll", section: "hero" },
-    { id: "about", path: "/", label: "About", type: "scroll", section: "hero" },
-    {
-      id: "skills",
-      path: "/",
-      label: "Skills",
-      type: "scroll",
-      section: "hero",
-    },
+    { id: "about", path: "/about", label: "About", type: "route"},
+    // {
+    //   id: "skills",
+    //   path: "/",
+    //   label: "Skills",
+    //   type: "scroll",
+    //   section: "hero",
+    // },
     {
       id: "resume",
       path: "/resume",
       label: "Resume",
       type: "route",
-      section: "hero",
     },
-    { id: "blog", path: "/", label: "Blog", type: "scroll", section: "hero" },
+    { id: "blog", path: "/blog", label: "Blog", type: "route"},
     {
       id: "poetry",
       path: "/poetry",
       label: "Poetry",
       type: "route",
-      section: "hero",
     },
     // { id: 'testimonials', label: 'Testimonials' },
     // { id: 'contact', label: 'Contact' },
   ];
-
-  // const scrollToSection = (sectionId) => {
-  //   const element = document.getElementById(sectionId);
-  //   element?.scrollIntoView({ behavior: "smooth" });
-  // };
-
-  // const handleNavClick = (e, item) => {
-  //   if (item.type === "scroll") {
-  //     e.preventDefault();
-  //     // Only scroll if we're on the home page
-  //     if (location.pathname === "/") {
-  //       const element = document.getElementById(item.section);
-  //       if (element) {
-  //         element.scrollIntoView({ behavior: "smooth" });
-  //       }
-  //     } else {
-  //       // If not on home page, go to home page first
-  //       window.location.href = `/${item.section}`;
-  //     }
-  //   }
-  // };
-
-  // const location = useLocation();  // Use the hook
 
   const handleNavClick = (e, item) => {
     if (item.type === "scroll") {
@@ -100,6 +74,9 @@ const Header = () => {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
+        // isSticky = true;
+        window.scrollTo(0, 0);
+        setActiveSection(item.section);
         navigate(`/#${item.section}`);
       }
     }
@@ -112,7 +89,7 @@ const Header = () => {
   };
 
   return (
-    <header id="header" className={`${isSticky ? "header-scrolled" : ""}`}>
+    <header id="header" className={`${isSticky ? "header-scrolled" : "header-not-scrolled"}`}>
       <div className="container mx-auto px-4">
         <div className="flex w-full header-nav">
           <div className="logo">

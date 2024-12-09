@@ -4,7 +4,7 @@ import './Contact.scss';
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact section-bg">
+    <section id="contact" className="contact section-padding white-bg">
       <div className="container">
         <div className="flex flex-wrap mx-4">
           <div className="col-lg-12 col-md-12">

@@ -1,10 +1,10 @@
 // src/components/About/About.jsx
 import React from 'react';
-import './About.scss';
+import './Me.scss';
 
-const About = () => {
+const Me = () => {
   return (
-    <section id="about" className="paddsection">
+    <section id="me" className="section-padding">
       <div className="container">
         <div className="row justify-between">
           <div className="col-lg-4">
@@ -33,4 +33,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Me;

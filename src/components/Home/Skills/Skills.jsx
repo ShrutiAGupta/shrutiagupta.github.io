@@ -40,7 +40,7 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id="skills">
+    <section id="skills" className="white-bg section-padding">
       <div className="container mx-auto px-4">
         <div className="section-title">
           <h2>Skills</h2>

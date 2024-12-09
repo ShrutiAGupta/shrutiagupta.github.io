@@ -30,7 +30,7 @@ const Hero = () => {
     <section id="hero" className="flex flex-column items-center justify-center">
       <h1>Hi, I'm Shruti!</h1>
       <h2>I am a <span ref={typedRef}></span></h2>
-      <a className="btn-get-started scrollto" onClick={() => scrollToSection('about')}>
+      <a className="btn-get-started scrollto" onClick={() => scrollToSection('me')}>
         <i className="bi bi-chevron-double-down"></i>
       </a>
     </section>

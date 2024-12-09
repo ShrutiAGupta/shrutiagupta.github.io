@@ -1,0 +1,270 @@
+export const poetryData = [
+  {
+    image: "/assets/img/poetry/honest-opinion.jpg",
+    title: "Surface Facades",
+    content: `I am hidden,
+beneath layers of uncountable lies
+Drowning;
+I try to come up,
+have a breath of fresh air
+But often suppressed
+to please some self-centered asshole
+Its not my fault that i'm hard hitting
+or that people fear me
+They want me but they still don't prefer me
+Deep down, all of them wonder
+what I am like
+But they're scared
+to face me;
+to face someone else;
+So I stay down,
+for moments, minutes and years
+Until one day
+someone comes along and beats me out
+Not literally, no
+And once i'm free
+I perish
+I go, but I change the world
+in that one second that I am out,
+No, I'm not the truth of the matter,
+or an indisputable fact,
+I am just... an Honest Opinion.`,
+    link: "surface-facades",
+  },
+  {
+    image: "/assets/img/poetry/just-hope.jpg",
+    title: "Illusions? Delusions? Or Just Hope?",
+    content: `Some hold onto it
+some give it
+Some ignore it
+And some fit it
+It comes to us in the happiest of the moments
+It leaves us in a fleeting stance
+It holds onto us
+And we hold onto it
+I'm an addict of it
+could never admit it was a drug
+The high is real
+And all doors are closed
+It strips me away of my defences
+And i stand there naked
+and vulnerable
+And it touches me in an intimate
+yet comforting way
+And then it leaves… give away.
+And all there's left is me
+standing alone.... devastated .... broken
+and begging for it to come back
+In all Its faces and lies
+for even though it hollows me
+it gives me the skies
+False hope some say
+Delusional desire of mind they may be
+Denial at its prime
+But it is no crime.`,
+    link: "just-hope",
+  },
+  {
+    image: "/assets/img/poetry/bare.avif",
+    title: "Bare- A Facade in the Making",
+    content: `What we had wasn't perfect
+It was:
+sunshine lined with darkness,
+liberty bound with shackles,
+smiles laced with pain,
+Lucid, yet still insane
+What we had was raw
+It was:
+truth every time you lied,
+fidelity every time I deceived,
+a yes every time you denied,
+Affection everytime we fucked.
+It was consuming with you
+All powerful but still too vulnerable
+And as I watched our demons and angels dance together
+I realised
+It was honest with you
+All hidden but still all bare.`,
+    link: "bare",
+  },  {
+    image: "/assets/img/poetry/heartbreak.jpg",
+    title: "Pathway to Heartbreak",
+    content: `Kisses and hugs,
+Sex and drugs,
+Coffee and date,
+A full fucking plate.
+We start walking,
+In silence, no talking,
+Thoughts in mind,
+Memories rewind.
+Hand in hand,
+Together in sand,
+Smiles and laughter,
+A budding disaster.
+I fall for that smile,
+And Like many others,
+I'm left as a bird,
+With broken feathers.`,
+    link: "heartbreak",
+  },  {
+    image: "/assets/img/poetry/strangers.jpg",
+    title: "Strangers",
+    content: `What we had wasn't perfect
+You meet as stranger
+You talk like one
+Caution evident in tone
+Scared to trust,
+but also to be alone.
+Then you get familiar
+and the strings unwind,
+from around your heart;
+giving way,
+to a little bright start.
+You talk and text,
+and joke
+starts as a spark, 
+then fire then smoke.
+You put your trust in them,
+and hope,
+they keep it safe;
+not lost, not broke.
+You get attached,
+yearning to see their faces
+they're your comfort
+your support
+in far off places.
+They remind you of home sometimes,
+of all the smiles
+and laughter
+and fun;
+And a heavy pain falls on your chest,
+weighing a ton.
+You try to get away,
+but you always moves closer,
+cause they are the sanity,
+the strength;
+that keeps you together,
+and makes you strong.
+And then you start fearing,
+about losing them,
+about them leaving you,
+about them being led away.
+You start getting insecure,
+about them finding better,
+about them realising better,
+about them deserving better.
+And in that moment, you realise
+they've become your family,
+bound together with love and pride.`,
+    link: "strangers",
+  },  {
+    image: "/assets/img/poetry/real-or-not.avif",
+    title: "Is it real or is it not?",
+    content: `What we had wasn't perfect
+Maybe harry potter is real
+Maybe not
+Maybe you're a fantasy 
+He dreams of
+Magic is inside
+We've all believed
+Maybe it's infact alive
+We've perceived 
+Maybe there are witches and wizards
+Maybe there are those
+Imaginary creatures
+Maybe werewolves exists too
+Maybe not
+The story is true
+Or maybe twist of thoughts
+Maybe a world exists
+With quiddich players
+Maybe death does make us
+See invisible clears
+Maybe it's not chess
+Ron plays with
+Maybe it's you
+He toys with
+Maybe it's not a story
+We've read
+Maybe it's a tale
+We're part of
+Maybe it's not about chosen one
+Maybe its about mending broken one
+With tales recalled
+Or stories formulated
+Maybe imagination
+Or maybe calculated
+Maybe not real
+Maybe not true
+But still binds us together
+Like a Weasley's glue.`,
+    link: "real-or-not",
+  },
+  {
+    image: "/assets/img/poetry/strings-of-blindness.webp",
+    title: "Strings of Blindness",
+    content: `What we had wasn't perfect
+Lost and found
+Silence and sound
+The latter I preffered
+The former profound
+This year
+I'd say,
+I found too much
+That,
+I lost count,
+I found that I'm not the one
+To be part of a useless race
+I'd rather be alone
+And find my own place.
+I met people that I connected with
+But I lost some too, 
+Cuz life doesn't wait
+Neither for me nor for you. 
+I discovered a side of me
+I never knew existed
+A part of me
+That wants to accept
+The decisions I've taken
+Wants to mend
+Bonds I've broken
+Patience and perseverance
+I never thought relevant
+Are helping me today
+In some time some way every day. 
+I met new people
+Some I love
+Some I don't even like
+Some I admire
+Some I may even depise
+Some who inspire to do good in life
+Some who shake faith and create a nasty ride
+Some I don't think I can ever part
+Some I feel like I can start a war
+Some I share, my deepest fears with
+Some who spark an annoyance at par with mountain peak
+Some who I think need me
+Some who I believe I need
+Some who show me, it's easy to be kind
+Some I learn from, it's better being blind
+These days
+Life is conflicted
+Trust is restricted
+Day is shaken
+Faith is taken
+Found I have
+Passion of thy soul
+Lost I did
+Hope of whole, 
+Found I have
+Friends who I adore
+Lost I have
+Love that slipped my hold
+But over an over
+A new ray shines
+Taking a leap of faith
+To flourish, 
+Hopes this blind.`,
+    link: "strings-of-blindness",
+  },
+];

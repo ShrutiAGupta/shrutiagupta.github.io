@@ -1,13 +1,21 @@
 import React from 'react';
-
+import { poetryData } from '../../data/poetryData';
+import PoetryCard from './PoetryCard';
+import './Poetry.scss';
 const Poetry = () => {
   return (
-    <main className="pt-16"> {/* Add padding-top to account for fixed header */}
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">About</h1>
-        {/* Your page content */}
+      <div className="mx-auto px-4 py-8">
+        <div className="container">
+        <div className="section-title">
+          <h2>Poetry</h2>
+        </div>
+        </div>
+        <div className="container flex flex-wrap">
+        {poetryData.map((post, index) => (
+          <PoetryCard key={index} {...post} />
+        ))}
       </div>
-    </main>
+      </div>
   );
 };
 

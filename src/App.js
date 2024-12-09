@@ -5,142 +5,89 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Shared/layout/Header";
 import Footer from "./components/Shared/layout/Footer";
-import Hero from "./components/Home/Hero/Hero";
-import Skills from "./components/Home/Skills/Skills";
-import Blog from "./components/Blog/Blog";
+// import Hero from "./components/Home/Hero/Hero";
+// import Skills from "./components/Home/Skills/Skills";
+// import BlogHome from "./components/Home/Blog/BlogHome";
 import Resume from "./components/Resume/Resume";
 import Testimonials from "./components/Home/Testimonials/Testimonials";
-import Contact from "./components/Home/Contact/Contact";
-import About from "./components/Home/About/About";
+// import Contact from "./components/Home/Contact/Contact";
+// import Me from "./components/Home/Me/Me";
 import "./App.scss";
 
 import Portfolio from "./components/Portfolio/Portfolio";
 import Poetry from "./components/Poetry/Poetry";
+import Blog from "./components/Blog/Blog";
+import About from "./components/About/About";
+import BlogIndividual from './components/Blog/BlogIndividual/BlogIndividual';
+import PoetryIndividual from './components/Poetry/PoetryIndividual/PoetryIndividual';
+import Home from "./components/Home/Home";
 
-const MainLayout = () => {
-  const { setActiveSection } = useActiveSection();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "skills",
-        "resume",
-        "blog",
-        "testimonials",
-        "contact",
-      ];
-      const scrollPosition = window.scrollY + 100;
+import ScrollToTop from "./hooks/scrollToTop";
+// import { sections } from "./components/Home/Home.model";
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [setActiveSection]);
-
+const Layout = ({ children }) => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Hero />
-            <Header />
-            <div className="main-content">
-              <main id="main">
-                <About />
-                <Skills />
-                {/* <Resume /> */}
-                <Blog />
-                {/* <Testimonials /> */}
-                <Contact />
-              </main>
-            </div>
-            <Footer />
-          </>
-        }
-      />
-      
-    </Routes>
+    <>
+      <Header />
+      <div className="main-content">
+        {children}
+      </div>
+      <Footer />
+    </>
   );
 };
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
           <>
-            <MainLayout />
+           <Home />
           </>
         }
       />
-      <Route
-        path="/portfolio"
-        element={
-          <>
-            <Header />
-            <div className="main-content">
-              <Portfolio />
-              <Footer />
-            </div>
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/blog"
-        element={
-          <>
-            <Header />
-            <div className="main-content">
-              <Portfolio />
-              <Footer />
-            </div>
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/poetry"
-        element={
-          <>
-            <Header />
-            <div className="main-content">
-              <Poetry />
-            </div>
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/resume"
-        element={
-          <>
-            <Header />
-            <div className="main-content">
-              <Resume />
-            </div>
-            <Footer />
-          </>
-        }
-      />
-    </Routes>
+        <Route path="/portfolio" element={
+          <Layout>
+            <Portfolio />
+          </Layout>
+        } />
+        <Route path="/blog" element={
+          <Layout>
+            <Blog />
+          </Layout>
+        } />
+        <Route path="/poetry" element={
+          <Layout>
+            <Poetry />
+          </Layout>
+        } />
+        <Route path="/resume" element={
+          <Layout>
+            <Resume />
+          </Layout>
+        } />
+        <Route path="/about" element={
+          <Layout>
+            <About />
+          </Layout>
+        } />
+        <Route path="/blog/:slug" element={
+          <Layout>
+            <BlogIndividual />
+          </Layout>
+        } />
+        <Route path="/poetry/:slug" element={
+          <Layout>
+            <PoetryIndividual />
+          </Layout>
+        } />
+      </Routes>
+    </>
   );
 }
 
