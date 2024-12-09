@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.4317cfa0.css",
-    "main.js": "/static/js/main.cd60399c.js",
+    "main.css": "/static/css/main.16e69b06.css",
+    "main.js": "/static/js/main.9cc59089.js",
     "static/media/hero-bg.jpg": "/static/media/hero-bg.873e99d4cca32502a522.jpg",
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.4317cfa0.css",
-    "static/js/main.cd60399c.js"
+    "static/css/main.16e69b06.css",
+    "static/js/main.9cc59089.js"
   ]
 }
