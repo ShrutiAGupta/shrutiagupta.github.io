@@ -21,6 +21,7 @@ import About from "./components/About/About";
 import BlogIndividual from './components/Blog/BlogIndividual/BlogIndividual';
 import PoetryIndividual from './components/Poetry/PoetryIndividual/PoetryIndividual';
 import Home from "./components/Home/Home";
+import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 
 
 import ScrollToTop from "./hooks/scrollToTop";
@@ -84,6 +85,11 @@ function App() {
         <Route path="/poetry/:slug" element={
           <Layout>
             <PoetryIndividual />
+          </Layout>
+        } />
+        <Route path="/photogallery" element={
+          <Layout>
+            <PhotoGallery />
           </Layout>
         } />
       </Routes>

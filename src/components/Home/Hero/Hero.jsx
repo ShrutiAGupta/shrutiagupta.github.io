@@ -27,15 +27,17 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="flex flex-column items-center justify-center">
-      <div className="hero-content">
-      <h1>Hi, I'm Shruti!</h1>
-      <h2>I am a <span ref={typedRef}></span></h2>
-      <a className="btn-get-started scrollto" onClick={() => scrollToSection('me')}>
-        <i className="bi bi-chevron-double-down"></i>
-      </a>
-      </div>
-    </section>
+<section id="hero" className="relative w-full h-screen">
+  <img className="absolute w-full h-full object-cover hero-image" />
+  <div className="absolute inset-0 bg-gradient-to-b from-[rgb(0,54,188,0.3)] to-[rgb(0,0,0,0.82)]" />
+  <div className="relative z-10 h-full flex flex-col items-center justify-center hero-content ">
+    <h1>Hi, I'm Shruti!</h1>
+    <h2>I am a <span ref={typedRef}></span></h2>
+    <a className="btn-get-started scrollto" onClick={() => scrollToSection('me')}>
+      <i className="bi bi-chevron-double-down"></i>
+    </a>
+  </div>
+</section>
   );
 };
 
