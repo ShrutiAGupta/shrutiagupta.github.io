@@ -109,8 +109,7 @@ With broken feathers.`,
   },  {
     image: "/assets/img/poetry/strangers.jpg",
     title: "Strangers",
-    content: `What we had wasn't perfect
-You meet as stranger
+    content: `You meet as stranger
 You talk like one
 Caution evident in tone
 Scared to trust,
@@ -160,8 +159,7 @@ bound together with love and pride.`,
   },  {
     image: "/assets/img/poetry/real-or-not.avif",
     title: "Is it real or is it not?",
-    content: `What we had wasn't perfect
-Maybe harry potter is real
+    content: `Maybe harry potter is real
 Maybe not
 Maybe you're a fantasy 
 He dreams of
@@ -203,8 +201,7 @@ Like a Weasley's glue.`,
   {
     image: "/assets/img/poetry/strings-of-blindness.webp",
     title: "Strings of Blindness",
-    content: `What we had wasn't perfect
-Lost and found
+    content: `Lost and found
 Silence and sound
 The latter I preffered
 The former profound
