@@ -1,6 +1,6 @@
 export const photos = [
     {
-      src: "/assets/img/portfolio/portfolio (1).jpg",
+      src: "/assets/img/portfolio/portfolio (1).JPG",
       tags: ['leadership', 'community']
     },
     {
@@ -16,7 +16,7 @@ export const photos = [
       tags: ['community', 'leadership', 'tech']
     },
     {
-      src: "/assets/img/portfolio/portfolio (5).jpg",
+      src: "/assets/img/portfolio/portfolio (5).JPG",
       tags: ['social', 'leadership', 'community']
     },
     {

@@ -18,7 +18,7 @@ const Me = () => {
           <div className="col-lg-7">
             <div className="about-descr">
               <p className="p-heading">
-                I'm a Jaipur-based web application developer with a keen eye for clean, simple, and unique design. 
+                I'm a India-based web application developer with a keen eye for clean, simple, and unique design. 
                 My passion extends to UI/UX design, brand identity creation, and illustration work.
               </p>
               <p className="separator">

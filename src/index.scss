@@ -137,3 +137,9 @@ code {
     }
   }
 }
+
+@media (max-width: 991px) {
+  .post .post-content .content {
+    padding-left: 2rem;
+  }
+}
