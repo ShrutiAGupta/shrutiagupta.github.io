@@ -12,24 +12,24 @@ const Poetry = () => {
       </div>
       <div className="container flex flex-wrap">
         <div className="left-col w-[50%] flex flex-wrap">
-          {poetryData.slice(0, 4).map((post, index) => (
+          {poetryData.slice(0, 1).map((post, index) => (
             <PoetryCard key={index} post={post} />
           ))}
         </div>
         <div className="right-col w-[50%] flex flex-wrap flex-col">
           <div className="right-t flex flex-row">
-            {poetryData.slice(4, 7).map((post, index) => (
+            {poetryData.slice(1, 4).map((post, index) => (
               <PoetryCard key={index} post={post} />
             ))}
           </div>
           <div className="right-b flex flex-row">
             <div className="right-b-left">
-              {poetryData.slice(7, 9).map((post, index) => (
+              {poetryData.slice(4, 5).map((post, index) => (
                 <PoetryCard key={index} post={post} />
               ))}
             </div>
-            <div className="right-b-right flex flex-col">
-              {poetryData.slice(9, 11).map((post, index) => (
+            <div className="right-b-right flex flex-row">
+              {poetryData.slice(5, 17).map((post, index) => (
                 <PoetryCard key={index} post={post} />
               ))}
             </div>
