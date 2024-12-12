@@ -1,10 +1,11 @@
 export const blogPosts = [
 {
+date: '2024-12-02',
+tags: ['tech'],
 image: '/assets/img/blog/building-personal-website.PNG',
-title: "Ready to Claim Your Corner of the Internet? Let's Build Your Dream Website!",
+title: "Ready to Claim Your Corner of the Internet? Let's Build Your Website!",
 description: "Why let social media have all the fun when you can have your own slice of the internet that's totally, uniquely you?",
 link: 'building-personal-website',
-date: '',
 content: `Hey there, future website owner! Tired of letting your amazing content live only on social media? Let's create something that's truly yours – a website that shows off exactly who you are and what you do. Don't worry if you've never built a website before – I'll walk you through it, no tech wizard hat required!
 First Things First: What's Your Vision?
 Before we dive into the fun stuff, let's dream a little! Take a moment to imagine your perfect website:
@@ -67,11 +68,12 @@ Ready to start building? Let's make something amazing together! ✨
 PS: The best websites are the ones that grow and evolve with you, so don't worry about making it perfect right away. Just get started – you can always add more awesome later!`,
 },
 {
+date: '2024-12-02',
+tags: ['tech', 'organization'],
 image: '/assets/img/blog/organizing-in-notion.png',
 title: 'Transform Your Life with Notion: A Friendly Guide to Getting Organized',
 description: 'Transform your chaotic to-do lists into a beautifully organized digital workspace that actually works for you.',
 link: 'organizing-in-notion',
-date: '',
 content: `
 Hey there! Feeling overwhelmed by the juggling act of work, life, and everything in between? We've all been there. But here's some good news – getting organized doesn't have to be a headache. Let me introduce you to your new best friend in productivity: Notion. It's a game-changing tool that can help you take control of your life in ways you never imagined.
 
@@ -129,11 +131,12 @@ PS: Don't forget to have fun while setting things up – organizing your life sh
 `,
 },
 {
+date: '2024-12-02',
+tags: ['creative'],
 image: '/assets/img/blog/writing-a-book.PNG',
 title: 'Turn Your Dreams into Pages: A Heart-to-Heart Guide on Writing Your Book',
 description: "Stop letting your brilliant ideas live only in your head – it's time to write that book you've been dreaming about.",
 link: 'writing-a-book',
-date: '',
 content: `
 You know that spark of an idea that keeps you up at night? That story burning to be told? Those insights you're dying to share? It's time to turn them into something incredible – your very own book. Let's walk through this journey together, step by step.
 
@@ -195,5 +198,17 @@ This might be your first book, but it doesn't have to be your last. Keep listeni
 </ol>
 Remember, every author you admire started exactly where you are now – with an idea and the courage to pursue it. Your voice matters, your story matters, and someone out there needs to read exactly what you have to write. So take that first step, keep going, and watch your book come to life. The world is waiting for your words! ✨
 `,
+},
+{
+    date: '2024-12-02',
+    tags: ['creative'],
+    image: '/assets/img/blog/writing-a-book.PNG',
+    title: 'Turn Your Dreams into Pages: A Heart-to-Heart Guide on Writing Your Book',
+    description: "Stop letting your brilliant ideas live only in your head – it's time to write that book you've been dreaming about.",
+    link: 'writing-a-book',
+    content: ``
 }
 ];
+
+export const featuredBlog = 'writing-a-book';
+export const monthFeaturedBlog = ['organizing-in-notion'];

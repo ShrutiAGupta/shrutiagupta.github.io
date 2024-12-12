@@ -17,7 +17,7 @@ const Contact = () => {
                   rel="noopener noreferrer" 
                   className="github"
                 >
-                  <i className="bi bi-github"></i>
+                  <i className="bx bxl-github"></i>
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/shruti-a-gupta/" 
@@ -25,7 +25,7 @@ const Contact = () => {
                   rel="noopener noreferrer" 
                   className="linkedin"
                 >
-                  <i className="bi bi-linkedin"></i>
+                  <i className="bx bxl-linkedin"></i>
                 </a>
                 <a 
                   href="mailto:shruti.a.gupta02@gmail.com" 

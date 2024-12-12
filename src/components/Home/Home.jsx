@@ -13,7 +13,9 @@ const Home = () => {
       <Header />
       <div className="main-content">
         <main id="main">
+          <div className="py-[150px]">
           <Me />
+          </div>
           <Skills />
           {/* <Resume /> */}
           <BlogHome />

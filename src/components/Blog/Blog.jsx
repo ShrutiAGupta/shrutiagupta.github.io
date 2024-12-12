@@ -1,9 +1,27 @@
 import React from 'react';
 import BlogCard from '../Home/BlogHome/BlogCard';
 import '../Home/BlogHome/BlogHome.scss';
-import { blogPosts } from '../../data/blogData';
+import './Blog.scss';
+import { blogPosts, monthFeaturedBlog, featuredBlog } from '../../data/blogData';
 
 const Blog = () => {
+
+  const blogs = blogPosts.map((e) => ({ descriptionPlacement: 'bottom', ...e }));
+
+  const mainPanel = {
+    ...blogs.find((e) => e.link === featuredBlog),
+    classes: 'full main',
+    descriptionPlacement: 'right',
+  };
+  
+  const rightPanel = blogs
+    .filter((e) => monthFeaturedBlog.includes(e.link))
+    .map((el) => ({ classes: 'full', ...el }));
+  
+  const belowPanel = blogs
+    .filter((e) => e.link !== featuredBlog && !monthFeaturedBlog.includes(e.link))
+    .slice(0, 3);
+
     return (
         <section id="blog" className="text-left paddsection section-bg">
           <div className="container">
@@ -12,15 +30,23 @@ const Blog = () => {
             </div>
           </div>
     
-          <div className="container">
-            <div className="blog-block">
-              <div className="flex flex-wrap -mx-4">
-                {blogPosts.map((post, index) => (
-                  <BlogCard key={index} {...post} />
-                ))}
-              </div>
-            </div>
+          <div className="panel-wrapper flex justify-between">
+        <div className="left-panel w-[75%]">
+          <div className="main-panel">
+          <BlogCard key={0} parent='blog' post={mainPanel} />
           </div>
+          <div className="flex flex-wrap">
+            {belowPanel.map((post, index) => (
+              <BlogCard key={index} parent='blog' post={post} />
+            ))}
+          </div>
+        </div>
+        <div className="right-panel w-[25%]">
+        {rightPanel.map((post, index) => (
+              <BlogCard key={index} parent='blog' post={post} />
+            ))}
+        </div>
+      </div>
         </section>
       );
 };

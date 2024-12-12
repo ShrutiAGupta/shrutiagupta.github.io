@@ -2,30 +2,38 @@
 import React from 'react';
 import './Me.scss';
 
-const Me = () => {
+const Me = ({ content }) => {
   return (
-    <section id="me" className="section-padding">
+    <section id="me" className="">
       <div className="container">
         <div className="row justify-between">
           <div className="col-lg-4">
-            <div className="div-img-bg">
+            <div className="div-img-bg"  style={{'margin-top': content ? '50px' : ''}}>
               <div className="about-img">
                 <img src="/assets/img/about.JPG" className="img-responsive" alt="me" />
               </div>
             </div>
           </div>
 
-          <div className="col-lg-7">
-            <div className="about-descr">
+          <div className={`col-lg-7  ${ content ? 'self-center' : ''}`}>
+            { !content ? 
+            <div className="about-descr text-left">
               <p className="p-heading">
-                I'm a India-based web application developer with a keen eye for clean, simple, and unique design. 
-                My passion extends to UI/UX design, brand identity creation, and illustration work.
+              Innovative and deadline-driven digital solutions developer from India with 3+ years of experience in web application development, UI/UX design, graphic design, data analytics, and business development. 
               </p>
               <p className="separator">
-                Beyond the digital realm, I'm an avid reader, movie enthusiast, and culinary explorer. 
-                I find joy in organizing spaces and am constantly driven by my love for learning and acquiring new skills.
+              I excel in creating robust applications, intuitive interfaces, compelling graphics, insightful data reports, and cohesive dashboards. I am passionate about clean, simple, and unique design centered around visual appeal, accessibility and ease.
               </p>
             </div>
+            :
+            <div className="about-descr text-left">
+              {content.map((e) => (
+                <p className={e.classes}>
+                  {e.text}
+                </p>
+              ))}
+            </div>
+            }
           </div>
         </div>
       </div>

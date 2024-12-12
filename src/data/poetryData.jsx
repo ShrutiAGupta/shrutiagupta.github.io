@@ -263,5 +263,5 @@ Taking a leap of faith
 To flourish, 
 Hopes this blind.`,
     link: "strings-of-blindness",
-  },
+  }
 ];

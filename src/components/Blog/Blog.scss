@@ -1,0 +1,42 @@
+.left-panel, .right-panel {
+  .main-panel {
+    .full {
+      width: 100% !important;
+    }
+
+    .full.main {
+        .blog-info{
+      /* height: 100%; */
+      display: flex;
+
+      .blog-txt {
+        background-color: #00102d;
+        width: 40%;
+        color: #fff;
+
+        .blog-tag {
+            border-color: #fff;
+        }
+
+        .separator {
+            color: #fff;
+
+        }
+
+      }
+
+      a {
+        width: 60%;
+
+        img {
+          height: 450px;
+        }
+      }
+    }
+}
+  }
+
+  .full {
+    width: 100% !important;
+  }
+}

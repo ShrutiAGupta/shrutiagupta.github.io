@@ -40,7 +40,7 @@ const BlogHome = () => {
         <div className="blog-block">
           <div className="flex flex-wrap -mx-4">
             {displayedPosts.map((post, index) => (
-              <BlogCard key={index} {...post} />
+              <BlogCard key={index} post={post} parent='home'/>
             ))}
           </div>
         </div>

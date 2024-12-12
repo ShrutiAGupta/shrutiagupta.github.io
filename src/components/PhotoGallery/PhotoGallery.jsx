@@ -46,7 +46,7 @@ const PhotoGallery = () => {
             <img
               src={photo.src}
               alt={photo.src}
-              className="w-full hover:opacity-90 transition-opacity"
+              className="w-full hover:opacity-90 transition-opacity cursor-pointer"
               onClick={() => setSelectedImage(photo.src)}
             />
           </div>
@@ -63,7 +63,7 @@ const PhotoGallery = () => {
             className="absolute cross-icon text-white hover:text-gray-300 text-2xl font-bold w-8 h-8"
             onClick={() => setSelectedImage(null)}
           >
-            ×
+           <i class='bx bx-x'></i>
           </button>
           <img
             src={selectedImage}

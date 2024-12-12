@@ -2,7 +2,7 @@
 @import '../../../styles/__variables';
 
 #me {
-  padding: 150px 0;
+  // padding: 150px 0;
   
   .row {
     display: flex;
@@ -43,21 +43,25 @@
     object-position: 50% 20%;
   }
   
-  .about-descr .p-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    text-align: left;
-    margin-bottom: 20px;
-  }
+  .about-descr {
+    // text-align: left;
   
-  .about-descr .separator {
-    max-width: 80%;
-    margin-bottom: 0;
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-  }
+    .p-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    
+    .separator {
+      max-width: 80%;
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #666;
+    }
+}
 }
 
   @media (max-width: 991px) {

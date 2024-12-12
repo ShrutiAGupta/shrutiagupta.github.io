@@ -11,17 +11,6 @@ const Resume = () => {
 
         <div className="flex flex-wrap -mx-4">
           <div className="lg:w-1/2 px-4">
-            {/* Left Column */}
-            <h3 className="resume-title">Summary</h3>
-            <div className="resume-item pb-0">
-              <h4>Shruti Gupta</h4>
-              <p><em>Innovative and deadline-driven pro with 3+ years of experience in professional skilled in web
-                application development, UI/UX design, graphic design, data analytics, brand identity, photography,
-                and business development. I excel in creating robust applications, intuitive interfaces, compelling
-                graphics, insightful data reports, and cohesive brand identities. My comprehensive approach and
-                attention to detail consistently deliver top-notch results, driving business growth and enhancing
-                project success.</em></p>
-            </div>
 
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
