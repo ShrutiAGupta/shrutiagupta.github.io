@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.12950f7e.css",
-    "main.js": "/static/js/main.d2009e28.js",
+    "main.js": "/static/js/main.b1b55ee0.js",
     "static/media/parallax-1.png": "/static/media/parallax-1.f7d2b7fa55a828b64d57.png",
     "static/media/hero.JPG": "/static/media/hero.f4db5ef7c8b5f84156d1.JPG",
     "static/media/parallax-2.webp": "/static/media/parallax-2.417dcadee369b09b31d7.webp",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.12950f7e.css",
-    "static/js/main.d2009e28.js"
+    "static/js/main.b1b55ee0.js"
   ]
 }
