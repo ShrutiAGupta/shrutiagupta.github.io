@@ -24,5 +24,4 @@ export const portfolioPanels = [
       panelColor: '#f3f3f3',
       sidebarColor: '#9b876b',
     },
-    // Add more panels as needed
   ];
