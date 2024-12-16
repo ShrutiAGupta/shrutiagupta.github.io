@@ -9,6 +9,7 @@ const Poetry = () => {
         <div className="section-title">
           <h2>Poetry</h2>
         </div>
+        <span className="flex italic self-center w-fit mx-auto mb-4">Hover over images to reveal poems • Click to read</span>
       </div>
       <div className="container flex flex-wrap sm:flex-col md:flex-row">
         <div className="left-col w-[50%] flex flex-wrap sm:w-[100%] md:w-[50%]">
