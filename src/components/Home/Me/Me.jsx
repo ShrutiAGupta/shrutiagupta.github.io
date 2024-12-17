@@ -18,10 +18,10 @@ const Me = ({ content }) => {
             { !content ? 
             <div className="about-descr text-left">
               <p className="p-heading">
-              Innovative and deadline-driven digital solutions developer from India with 3+ years of experience in web application development, UI/UX design, graphic design, data analytics, and business development. 
+              Innovative digital solutions developer from India with 3+ years of experience in web application development, UI/UX design, graphic design, data analytics, and business development. 
               </p>
-              <p className="separator">
-              I excel in creating robust applications, intuitive interfaces, compelling graphics, insightful data reports, and cohesive dashboards. I am passionate about clean, simple, and unique design centered around visual appeal, accessibility and ease.
+              <p className="home-separator">
+               I am passionate about clean, simple, and unique design centered around visual appeal, accessibility and ease.
               </p>
             </div>
             :

@@ -2,10 +2,11 @@
 import React from 'react';
 import BlogCard from './BlogCard';
 import './BlogHome.scss';
-import { blogPosts } from '../../../data/blogData';
+import { blogPosts, homeFeature } from '../../../data/blogData';
+import { Link } from 'react-router-dom';
 
 const BlogHome = () => {
-  const displayedPosts = blogPosts.slice(0, 3);
+  const displayedPosts = blogPosts.filter((e) => homeFeature.includes(e.link));
 
   return (
     <section id="blog" className="text-left section-padding">
@@ -23,6 +24,8 @@ const BlogHome = () => {
             ))}
           </div>
         </div>
+        <Link to="/blog/" className="flex justify-end items-center">
+        <div className="section-link">View All Posts <i class='bx bx-chevrons-right ml-2'></i></div></Link>
       </div>
     </section>
   );

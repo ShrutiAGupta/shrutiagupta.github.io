@@ -68,7 +68,7 @@ const Header = () => {
           </div>
 
           <button
-            className="mobile-nav-toggle"
+            className="mobile-nav-toggle font-bold"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <i className={`bi ${isMenuOpen ? "bi-x" : "bi-list"}`}></i>
@@ -78,6 +78,18 @@ const Header = () => {
             id="navbar"
             className={`navbar ${isMenuOpen ? "navbar-mobile" : ""}`}
           >
+            {isMenuOpen && <div className="justify-between logo-bar">
+              <div className="logo">
+            <Link to="/">
+              <img src="assets/img/icon.png" alt="" className="img-fluid" />
+            </Link>
+          </div>
+          <button 
+            className="cross text-gray font-bold"
+            onClick={() => setIsMenuOpen(false)}
+          >
+           <i className='bx bx-x'></i>
+          </button></div>}
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>

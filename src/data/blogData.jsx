@@ -1,12 +1,34 @@
 export const blogPosts = [
-{
-date: '2021-06-28',
-tags: ['tech'],
-image: '/assets/img/blog/building-personal-website.PNG',
-title: "Ready to Claim Your Corner of the Internet? Let's Build Your Website!",
-description: "Why let social media have all the fun when you can have your own slice of the internet that's totally, uniquely you?",
-link: 'building-personal-website',
-content: `Hey there, future website owner! Tired of letting your amazing content live only on social media? Let's create something that's truly yours – a website that shows off exactly who you are and what you do. Don't worry if you've never built a website before – I'll walk you through it, no tech wizard hat required!
+    {
+        date: '2024-12-02',
+        tags: ['philosophy'],
+        image: '/assets/img/blog/be-a-well.jpg',
+        title: "Don't Be an Ocean, Just Be a Nice Well",
+        description: "When perfectionism meets wisdom: A lesson in doing less, but doing it well",
+        link: 'be-a-well',
+        content: `<blockquote class="quote"><div>Shruti, DON'T Be an Ocean, JUST Be a Nice Well<author>Harshaan Arora, 2024</author><div></blockquote>Ever catch yourself turning a simple task into an epic quest? That was me, meticulously trying to cover every possible angle, every potential scenario, every little detail until what started as a straightforward project had somehow morphed into an ocean of complexity.
+    
+That's when my friend dropped this gem of wisdom: "Don't be an ocean, just be a nice well."
+He'd seen this pattern before – my tendency to overcomplicate things, to try and cover everything possible within a single task. While I was busy trying to boil the ocean, he recognized something I couldn't see: I was making things harder than they needed to be.
+
+It's funny how we do this to ourselves. We start with something manageable, then our minds begin to expand it: "But what about this angle? And that possibility? Oh, and we can't forget about this other aspect!" Before we know it, we're drowning in our own ambition to make everything perfect, complete, absolute.
+But here's what my friend understood: sometimes being thorough doesn't mean covering every possible thing. Sometimes it means doing the essential things well. Like a well – focused, deep, and serving its purpose perfectly without trying to span the horizons like an ocean.
+
+The beauty of being a "nice well" lies in its simplicity. A well doesn't try to contain every type of water or serve every possible purpose. It does one thing: it provides clean, fresh water to those who need it. And it does this reliably, consistently, without the drama of waves and storms.
+
+Now, when I catch myself spinning a simple task into an oceanic undertaking, I smile and remember these words. Sometimes the kindest thing we can do for ourselves is to stop trying to boil the ocean and just be a nice, reliable well instead. Find your depth, serve your purpose, and do it with kindness.
+After all, not everything needs to be vast to be valuable. Sometimes, being focused and doing less – but doing it well – is exactly what's needed.
+    
+    `
+    },
+    {
+        date: '2021-06-28',
+        tags: ['tech'],
+        image: '/assets/img/blog/building-personal-website.PNG',
+        title: "Ready to Claim Your Corner of the Internet? Let's Build Your Website!",
+        description: "Why let social media have all the fun when you can have your own slice of the internet that's totally, uniquely you?",
+        link: 'building-personal-website',
+        content: `Hey there, future website owner! Tired of letting your amazing content live only on social media? Let's create something that's truly yours – a website that shows off exactly who you are and what you do. Don't worry if you've never built a website before – I'll walk you through it, no tech wizard hat required!
 First Things First: What's Your Vision?
 Before we dive into the fun stuff, let's dream a little! Take a moment to imagine your perfect website:
 
@@ -68,15 +90,15 @@ Ready to start building? Let's make something amazing together! ✨
 PS: The best websites are the ones that grow and evolve with you, so don't worry about making it perfect right away. Just get started – you can always add more awesome later!
 
 `,
-},
-{
-date: '2024-04-19',
-tags: ['tech', 'organization'],
-image: '/assets/img/blog/organizing-in-notion.png',
-title: 'Transform Your Life with Notion: A Friendly Guide to Getting Organized',
-description: 'Transform your chaotic to-do lists into a beautifully organized digital workspace that actually works for you.',
-link: 'organizing-in-notion',
-content: `
+    },
+    {
+        date: '2024-04-19',
+        tags: ['tech', 'organization'],
+        image: '/assets/img/blog/organizing-in-notion.png',
+        title: 'Notion: A Guide to Getting Organized',
+        description: 'Transforming chaotic to-do lists into organized digital workspace that actually works',
+        link: 'organizing-in-notion',
+        content: `
 Hey there! Feeling overwhelmed by the juggling act of work, life, and everything in between? We've all been there. But here's some good news – getting organized doesn't have to be a headache. Let me introduce you to your new best friend in productivity: Notion. It's a game-changing tool that can help you take control of your life in ways you never imagined.
 
 <b>Getting to Know Notion</b>
@@ -132,15 +154,15 @@ Ready to take the plunge? Jump into Notion and start exploring! Take it one step
 PS: Don't forget to have fun while setting things up – organizing your life shouldn't feel like a chore. It's all about making your digital space work for you!
 
 `,
-},
-{
-date: '2023-05-12',
-tags: ['creative'],
-image: '/assets/img/blog/writing-a-book.PNG',
-title: 'Turn Your Dreams into Pages: A Heart-to-Heart Guide on Writing Your Book',
-description: "Stop letting your brilliant ideas live only in your head – it's time to write that book you've been dreaming about.",
-link: 'writing-a-book',
-content: `
+    },
+    {
+        date: '2023-05-12',
+        tags: ['creative'],
+        image: '/assets/img/blog/writing-a-book.PNG',
+        title: 'Dreams to Pages: A Book Writing Guide',
+        description: "Learn how to transform those brilliant ideas in your head to the book of your dreams",
+        link: 'writing-a-book',
+        content: `
 You know that spark of an idea that keeps you up at night? That story burning to be told? Those insights you're dying to share? It's time to turn them into something incredible – your very own book. Let's walk through this journey together, step by step.
 
 <ol>
@@ -202,37 +224,15 @@ This might be your first book, but it doesn't have to be your last. Keep listeni
 Remember, every author you admire started exactly where you are now – with an idea and the courage to pursue it. Your voice matters, your story matters, and someone out there needs to read exactly what you have to write. So take that first step, keep going, and watch your book come to life. The world is waiting for your words! ✨
 
 `,
-},
-{
-    date: '2024-12-02',
-    tags: ['philosophy'],
-    image: '/assets/img/blog/be-a-well.jpg',
-    title: "Don't Be an Ocean, Just Be a Nice Well",
-    description: "When perfectionism meets wisdom: A lesson in doing less, but doing it well",
-    link: 'be-a-well',
-    content: `<blockquote class="quote"><div>Shruti, DON'T Be an Ocean, JUST Be a Nice Well<author>Harshaan Arora, 2024</author><div></blockquote>Ever catch yourself turning a simple task into an epic quest? That was me, meticulously trying to cover every possible angle, every potential scenario, every little detail until what started as a straightforward project had somehow morphed into an ocean of complexity.
-
-That's when my friend dropped this gem of wisdom: "Don't be an ocean, just be a nice well."
-He'd seen this pattern before – my tendency to overcomplicate things, to try and cover everything possible within a single task. While I was busy trying to boil the ocean, he recognized something I couldn't see: I was making things harder than they needed to be.
-
-It's funny how we do this to ourselves. We start with something manageable, then our minds begin to expand it: "But what about this angle? And that possibility? Oh, and we can't forget about this other aspect!" Before we know it, we're drowning in our own ambition to make everything perfect, complete, absolute.
-But here's what my friend understood: sometimes being thorough doesn't mean covering every possible thing. Sometimes it means doing the essential things well. Like a well – focused, deep, and serving its purpose perfectly without trying to span the horizons like an ocean.
-
-The beauty of being a "nice well" lies in its simplicity. A well doesn't try to contain every type of water or serve every possible purpose. It does one thing: it provides clean, fresh water to those who need it. And it does this reliably, consistently, without the drama of waves and storms.
-
-Now, when I catch myself spinning a simple task into an oceanic undertaking, I smile and remember these words. Sometimes the kindest thing we can do for ourselves is to stop trying to boil the ocean and just be a nice, reliable well instead. Find your depth, serve your purpose, and do it with kindness.
-After all, not everything needs to be vast to be valuable. Sometimes, being focused and doing less – but doing it well – is exactly what's needed.
-
-`
-},
-{
-    date: '2022-11-28',
-    tags: ['philosophy'],
-    image: '/assets/img/blog/the-right-thing.jpg',
-    title: "Is the right thing bigger than all of us?",
-    description: "What exactly are the dimensions of right?",
-    link: 'the-right-thing',
-    content: `Think about the last time you knew, deep in your bones, that something was the right thing to do. Where did that certainty come from? This question opens up one of philosophy's most fascinating puzzles: Is moral truth something bigger than humanity, or is it something we create together?
+    },
+    {
+        date: '2022-11-28',
+        tags: ['philosophy'],
+        image: '/assets/img/blog/the-right-thing.jpg',
+        title: "Is the right thing bigger than all of us?",
+        description: "What exactly are the dimensions of right? And who decides them?",
+        link: 'the-right-thing',
+        content: `Think about the last time you knew, deep in your bones, that something was the right thing to do. Where did that certainty come from? This question opens up one of philosophy's most fascinating puzzles: Is moral truth something bigger than humanity, or is it something we create together?
 Let's explore this with open minds and warm hearts.
 
 The Whisper of Universal Truth
@@ -268,4 +268,5 @@ In this light, asking whether "the right thing" is bigger than us becomes an inv
 ];
 
 export const featuredBlog = 'be-a-well';
-export const monthFeaturedBlog = ['the-right-thing'];
+export const monthFeaturedBlog = ['building-personal-website'];
+export const homeFeature = ['be-a-well', 'organizing-in-notion', 'writing-a-book'];

@@ -63,7 +63,7 @@ Delusional desire of mind they may be
 Denial at its prime
 But it is no crime.`,
   }, {
-    image: "/assets/img/poetry/bare.avif",
+    image: "/assets/img/poetry/bare.jpg",
     title: "Bare- A Facade in the Making",
     link: "bare",
     content: `What we had wasn't perfect
@@ -196,7 +196,7 @@ Maybe not true
 But still binds us together
 Like a Weasley's glue.`,
   }, {
-    image: "/assets/img/poetry/strings-of-blindness.webp",
+    image: "/assets/img/poetry/strings-of-blindness.jpg",
     title: "Strings of Blindness",
     link: "strings-of-blindness",
     content: `Lost and found
@@ -285,7 +285,7 @@ to something that doesn't exist
 how to break shackles,
 I can feel,
 but shackles I can't see.
-how to breathem
+how to breathe
 without my lungs choking
 from the overwhelming feeling of suffocation.
 So I stay,
@@ -298,7 +298,7 @@ I endure this painless, painful existence.`,
     image: "/assets/img/poetry/colouring-pain.jpg",
     title: "Colouring Pain",
     link: 'colouring-pain',
-    content: `In the days of grayon and glitter,
+    content: `In the days of crayon and glitter,
 I was dealing with the taste of bitter
 In a world meant to welcome,
 I got nothing but a bowl of venom
