@@ -9,7 +9,7 @@ import "./Resume.scss";
 
 const Resume = () => {
   return (
-    <section id="resume" className="resume bg-white py-12">
+    <section id="resume" className="resume py-12">
       <div className="container mx-auto px-4">
         <div className="section-title">
           <h2>Resume</h2>
