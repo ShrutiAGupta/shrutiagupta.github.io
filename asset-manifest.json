@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a116573.css",
-    "main.js": "/static/js/main.7171426a.js",
+    "main.css": "/static/css/main.d7a25cf3.css",
+    "main.js": "/static/js/main.8e856f18.js",
     "static/media/parallax-1.png": "/static/media/parallax-1.f7d2b7fa55a828b64d57.png",
     "static/media/hero.JPG": "/static/media/hero.f4db5ef7c8b5f84156d1.JPG",
     "static/media/parallax-2.webp": "/static/media/parallax-2.417dcadee369b09b31d7.webp",
+    "static/media/music-cover.jpg": "/static/media/music-cover.e1496e3304f1d13dd3ce.jpg",
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.4a116573.css",
-    "static/js/main.7171426a.js"
+    "static/css/main.d7a25cf3.css",
+    "static/js/main.8e856f18.js"
   ]
 }
