@@ -50,7 +50,7 @@ const Music = () => {
         <MusicHero />
 
         <div
-          className="min-h-screen main-content w-full overflow-y-auto z-[1] pt-[50px]"
+          className="min-h-screen bg-music-gradient w-full overflow-y-auto z-[1] pt-[50px]"
           id="music"
         >
           <div className="max-w-7xl mx-auto">

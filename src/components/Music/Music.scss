@@ -1,18 +1,10 @@
 .music-container {
-  background: linear-gradient(90deg, rgba(13, 10, 21), rgba(13, 8, 22));
+  background: rgba(13, 10, 21);
   // background-image: url("../../../public/assets/img/music-cover.jpg");
 }
 
 .music-hero {
   background-image: url("../../../public/assets/img/music-cover.jpg");
-}
-
-#music.main-content {
-  background: linear-gradient(
-    90deg,
-    rgba(13, 10, 21, 0.6),
-    rgba(13, 8, 22, 0.6)
-  ) !important;
 }
 
 .music-container-cover{
