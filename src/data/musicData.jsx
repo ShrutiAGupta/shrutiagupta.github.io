@@ -11,12 +11,12 @@ export const musicData = {
         songFile: "assets/audio/songs/never_will_it_get.m4a",
         length: 2.47,
       },
-      {
-        songName: "Am I gonna die alone?",
-        songId: 2,
-        songFile: "assets/audio/songs/",
-        length: 2.44,
-      },
+      // {
+      //   songName: "Am I gonna die alone?",
+      //   songId: 2,
+      //   songFile: "assets/audio/songs/",
+      //   length: 2.44,
+      // },
       {
         songName: "Bleeding Voids",
         songId: 3,
@@ -25,21 +25,7 @@ export const musicData = {
       },     
     ],
   },
-  'Dusk: Promise of Dawn': {
-    albumCoverImage: "assets/img/music/dusk2dawn.jpg",
-    albumDescription: "",
-    albumBackground: '#5b708e',
-    albumTitleShade: '#152640',
-    songs: [
-      {
-        songName: "Nocturnal Mornings",
-        songId: 1,
-        songFile: "assets/audio/songs/muskaan.m4a",
-        length: 2.47,
-      },
-    ],
-  },
-  // 'Promise of Dawn': {
+  // 'Dusk: Promise of Dawn': {
   //   albumCoverImage: "assets/img/music/dusk2dawn.jpg",
   //   albumDescription: "",
   //   albumBackground: '#5b708e',
@@ -51,22 +37,6 @@ export const musicData = {
   //       songFile: "assets/audio/songs/muskaan.m4a",
   //       length: 2.47,
   //     },
-
-  //   ],
-  // },
-  // 'of Dawn': {
-  //   albumCoverImage: "assets/img/music/dusk2dawn.jpg",
-  //   albumDescription: "",
-  //   albumBackground: '#5b708e',
-  //   albumTitleShade: '#152640',
-  //   songs: [
-  //     {
-  //       songName: "Nocturnal Mornings",
-  //       songId: 1,
-  //       songFile: "assets/audio/songs/muskaan.m4a",
-  //       length: 2.47,
-  //     },
-
   //   ],
   // },
 };
