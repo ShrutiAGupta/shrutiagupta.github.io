@@ -31,7 +31,7 @@ const Blog = () => {
           </div>
     
           <div className="panel-wrapper flex justify-between flex-row flex-wrap">
-        <div className="left-panel md:w-[100%] lg:w-[75%]">
+        <div className="left-panel md:w-full lg:w-[75%]">
           <div className="main-panel">
           <BlogCard key={0} parent='blog' post={mainPanel} />
           </div>
@@ -41,7 +41,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
-        <div className="right-panel md:w-[100%] lg:w-[25%]">
+        <div className="right-panel md:w-full lg:w-[25%]">
         {rightPanel.map((post, index) => (
               <BlogCard key={index} parent='blog' post={post} />
             ))}

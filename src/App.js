@@ -22,7 +22,7 @@ import BlogIndividual from './components/Blog/BlogIndividual/BlogIndividual';
 import PoetryIndividual from './components/Poetry/PoetryIndividual/PoetryIndividual';
 import Home from "./components/Home/Home";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
-
+import Music from "./components/Music/Music";
 import ScrollToTop from "./hooks/scrollToTop";
 import ParallaxResume  from "./components/Shared/Resume/Resume";
 // import { sections } from "./components/Home/Home.model";
@@ -56,6 +56,15 @@ function App() {
           </>
         }
       />
+      <Route
+        path="/music"
+        element={
+          <>
+           <Music />
+          </>
+        }
+      />
+      {/* #281913 */}
         <Route path="/portfolio" element={
           <Layout>
             <Portfolio />

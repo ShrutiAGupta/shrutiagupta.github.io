@@ -357,6 +357,6 @@ about being fine alone.
 They know, too, how I search
 for footsteps at my door,
 But I've learned that hope
-is heaviest when it falls.`,
+is heaviest when it doesn't walk through.`,
   }
 ];

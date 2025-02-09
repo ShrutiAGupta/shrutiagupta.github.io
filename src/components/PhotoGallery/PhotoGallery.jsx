@@ -70,13 +70,13 @@ const PhotoGallery = () => {
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute cross-icon text-white hover:text-gray-300 font-bold"
+            className="absolute text-white hover:text-gray-300 font-bold top-[60px] right-0 text-[40px]"
             onClick={() => setSelectedImage(null)}
           >
             <i className="bx bx-x"></i>
           </button>
           <button
-            className="icon absolute text-white left"
+            className="flex items-center justify-center top-1/2 text-[50px] bg-[#ffffff30] w-fit h-fit rounded-lg absolute text-white left-[5%] group transition-transform duration-300 ease-in-out hover:translate-x-[-20%]"
             onClick={(e) => {
               e.stopPropagation();
               handlePhotoNavClick({ type: "prev" });
@@ -91,10 +91,10 @@ const PhotoGallery = () => {
             onClick={(e) => e.stopPropagation()}
           />
           {selectedImage.caption && (
-            <div className="img-caption">{selectedImage.caption}</div>
+            <div className="img-caption absolute bg-black bottom-8 w-4/5 text-gray-400 text-center py-1 px-3">{selectedImage.caption}</div>
           )}
           <button
-            className="icon absolute text-white right"
+            className="flex items-center justify-center top-1/2 text-[50px] bg-[#ffffff30] w-fit h-fit rounded-lg absolute text-white right-[5%] group transition-transform duration-300 ease-in-out hover:translate-x-[20%]"
             onClick={(e) => {
               e.stopPropagation();
               handlePhotoNavClick({ type: "next" });

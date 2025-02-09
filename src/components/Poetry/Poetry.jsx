@@ -12,12 +12,12 @@ const Poetry = () => {
         <span className="flex italic self-center w-fit mx-auto mb-4">Hover over images to reveal poems • Click to read</span>
       </div>
       <div className="container flex flex-wrap sm:flex-col md:flex-row">
-        <div className="left-col w-[100%] flex flex-wrap sm:w-[100%] md:w-[50%] lg:w-[50%]">
+        <div className="left-col w-full flex flex-wrap sm:w-full md:w-[50%] lg:w-[50%]">
           {poetryData.slice(0, 4).map((post, index) => (
             <PoetryCard key={index} post={post} />
           ))}
         </div>
-        <div className="right-col w-[100%] flex flex-wrap sm:w-[100%] md:w-[50%] lg:w-[50%] flex-col">
+        <div className="right-col w-full flex flex-wrap sm:w-full md:w-[50%] lg:w-[50%] flex-col">
           <div className="right-t flex flex-row">
             {poetryData.slice(4, 7).map((post, index) => (
               <PoetryCard key={index} post={post} />
