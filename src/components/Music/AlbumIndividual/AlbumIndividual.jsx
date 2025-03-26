@@ -20,6 +20,12 @@ const AlbumIndividual = ({
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);
 
+  const [songs, setSongs] = useState(() => 
+    [...albumData.songs].sort((a, b) => a.songId - b.songId)
+  );
+
+  albumData.songs = songs;
+
   if (!currentSong) {
     setCurrentSong(albumData.songs[0]);
   }

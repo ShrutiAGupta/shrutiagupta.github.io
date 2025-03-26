@@ -25,7 +25,7 @@ const BlogHome = () => {
           </div>
         </div>
         <Link to="/blog/" className="flex justify-end items-center">
-        <div className="section-link">View All Posts <i class='bx bx-chevrons-right ml-2'></i></div></Link>
+        <div className="shadow-[0_5px_25px_rgba(0,0,0,0.3)] bg-white bg-opacity-10 inline-flex py-[10px] px-[20px] text-primary">View All Posts <i class='bx bx-chevrons-right ml-2 text-xl'></i></div></Link>
       </div>
     </section>
   );
