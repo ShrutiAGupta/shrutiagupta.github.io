@@ -19,7 +19,9 @@ const Resume = () => {
           <div className="lg:w-1/2 px-4">
             <div>
               <h3 className="resume-title">Education</h3>
-              {education[0] && <ResumeItem exp={education[0]} />}
+              {education?.map((experience, index) => (
+                <ResumeItem key={index} exp={experience} />
+              ))}
             </div>
             <div>
               <h3 className="resume-title">Professional Experience</h3>
