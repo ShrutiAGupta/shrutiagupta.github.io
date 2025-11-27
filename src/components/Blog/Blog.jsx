@@ -1,49 +1,54 @@
-// src/components/Blog/Blog.jsx
 import React from 'react';
-import BlogCard from './BlogCard';
+import BlogCard from '../Home/BlogHome/BlogCard';
+import '../Home/BlogHome/BlogHome.scss';
 import './Blog.scss';
-
-const blogPosts = [
-  {
-    image: '/assets/img/blog/building-personal-website.PNG',
-    title: 'Crafting Your Digital Identity: All about Building Your Personal Website',
-    description: 'Why blend in on social media when you can stand out with your own website?',
-    link: 'blogs/building-personal-website.html'
-  },
-  {
-    image: '/assets/img/blog/organizing-in-notion.png',
-    title: 'Mastering Your Life: A Comprehensive Guide to Organizing with Notion',
-    description: 'Why juggle a dozen apps when you can have your life perfectly organized in Notion?',
-    link: 'blogs/organizing-in-notion.html'
-  },
-  {
-    image: '/assets/img/blog/writing-a-book.PNG',
-    title: 'The Power of Your Story: An ode to your thoughts',
-    description: 'Have you ever thought about writing a book? No? Maybe this will help...',
-    link: 'blogs/writing-a-book.html'
-  }
-];
+import { blogPosts, monthFeaturedBlog, featuredBlog } from '../../data/blogData';
 
 const Blog = () => {
-  return (
-    <section id="blog" className="text-left paddsection section-bg">
-      <div className="container">
-        <div className="section-title text-center">
-          <h2>BLOG</h2>
-        </div>
-      </div>
 
-      <div className="container">
-        <div className="blog-block">
-          <div className="flex flex-wrap -mx-4">
-            {blogPosts.map((post, index) => (
-              <BlogCard key={index} {...post} />
+  const blogs = blogPosts.map((e) => ({ descriptionPlacement: 'bottom', ...e }));
+
+  const mainPanel = {
+    ...blogs.find((e) => e.link === featuredBlog),
+    classes: 'full main',
+    descriptionPlacement: 'right',
+  };
+  
+  const rightPanel = blogs
+    .filter((e) => monthFeaturedBlog.includes(e.link))
+    .map((el) => ({ classes: 'full', ...el }));
+  
+  const belowPanel = blogs
+    .filter((e) => e.link !== featuredBlog && !monthFeaturedBlog.includes(e.link))
+    .slice(0, 3).sort((x, y)=> new Date(y.date) - new Date(x.date));
+
+    return (
+        <section id="blog" className="text-left paddsection section-bg">
+          <div className="container">
+            <div className="section-title text-center">
+              <h2>BLOG</h2>
+            </div>
+          </div>
+    
+          <div className="panel-wrapper flex justify-between flex-row flex-wrap">
+        <div className="left-panel md:w-full lg:w-[75%]">
+          <div className="main-panel">
+          <BlogCard key={0} parent='blog' post={mainPanel} />
+          </div>
+          <div className="flex flex-wrap">
+            {belowPanel.map((post, index) => (
+              <BlogCard key={index} parent='blog' post={post} />
             ))}
           </div>
         </div>
+        <div className="right-panel md:w-full lg:w-[25%]">
+        {rightPanel.map((post, index) => (
+              <BlogCard key={index} parent='blog' post={post} />
+            ))}
+        </div>
       </div>
-    </section>
-  );
+        </section>
+      );
 };
 
 export default Blog;

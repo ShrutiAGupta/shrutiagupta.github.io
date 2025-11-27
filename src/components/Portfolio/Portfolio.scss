@@ -1,177 +1,158 @@
 /* src/components/Portfolio/Portfolio.scss */
-@import '../../styles/__variables';
+@import "../../styles/__variables";
 
-body.portfolio-1 {
-  overflow-x: hidden;
-}
-
-body.portfolio-1 #header {
-  position: fixed;
-  top: 0;
-}
-
-#main.portfolio {
-  margin: 0;
-  height: 100vh;
-
-  .container {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    padding-left: var(--sidebar-width);
-    overflow-x: hidden;
-    max-width: none;
-    width: calc(300vw - var(--sidebar-width));
-  }
-
-  .panel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 2em;
-    color: #fff;
-    margin: 0;
-
-    &-1 {
-      background: #fff;
-      width: calc(100vw - var(--sidebar-width)*3);
-      z-index: 1;
-    }
-
-    &-2 {
-      width: calc(100vw - var(--sidebar-width) *2 - 30px);
-      z-index: 2;
-      padding-left: var(--sidebar-width);
-      background: #e6e6e6;
-    }
-
-    &-3 {
-      background: #fff;
-      width: calc(100vw - var(--sidebar-width));
-      z-index: 3;
-      padding-left: calc(var(--sidebar-width)* 2 + 30px);
-    }
-
-    &:nth-child(odd) {
-        background-color: #fff;
-      }
-      
-      &:nth-child(even) {
-        background-color: #e6e6e6;
-      }
-  }
-
-  .rotate-90 {
-    display: inline-block;
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-  }
-
-  .sidebars__list {
-    list-style: none;
-    font-size: 0px;
-  }
-
-  .vertical-bar {
-    width: var(--sidebar-width);
-    position: fixed;
-    font-size: 16px;
-    color: #fff;
-    top: 0;
-    height: 100vh;
-    z-index: 10;
-
-    &__panel-1 {
-      background-color: #9b876b;
-      left: 0;
-    }
-
-    &__panel-2 {
-      background-color: #b8a07e;
-      right: var(--sidebar-width);
-    }
-
-    &__panel-3 {
-      background-color: #b8a07e;
-      right: 0;
-      opacity: 0.7;
-    }
-  }
-}
-
-// Portfolio Details Styles
-.portfolio-details {
-  height: 100%;
+.portfolio-container {
+  position: relative;
   width: 100%;
-  padding: 0;
-  padding-top: 60px;
+}
 
-  &-container {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    overflow-y: hidden;
-    padding: 3% calc(3% + 15px) 3% 3%;
-    color: black;
-  }
+// Panels wrapper
+.panels-wrapper {
+  position: relative;
+  z-index: 2;
+}
 
-  .portfolio-info {
-    padding: 1rem;
-    box-shadow: 0px 0 30px rgba(44, 73, 100, 0.08);
-    height: fit-content;
+// Fixed timeline navigator on the left
+.timeline-navigator {
+  position: fixed;
+  left: 5%;
+  // top: 50%;
+  // transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100vh;
+}
 
-    h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #eee;
-    }
+.timeline-nav-line {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  min-height: 100%;
+  // transform: translateY(-50%);
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 15px;
+.timeline-nav-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.45s ease;  // smooth motion
+  // transform: translateY(calc(var(--active-index) * -80px));
+  /* We’ll update a CSS var like --active-index to shift the wrapper */
+}
 
-      li + li {
-        margin-top: 10px;
-      }
-    }
-  }
+.timeline-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  z-index: 1;
+height: 80px;
+  /* 👇 important: fixed row height so layout doesn't jump */
+  height: 60px;
 
-  .portfolio-description {
-    padding-top: 30px;
+  /* vertical offset based on offset index */
+  transform: translateY(calc(var(--offset) * 200%));
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
 
-    h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+}
 
-    p {
-      padding: 0;
-      font-size: 1rem;
-    }
+.timeline-nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(184, 184, 184);
+  // border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.45s ease;
+  flex-shrink: 0;
+  position: relative;
+  right: 7px;
+  transform: translateX(50%);
+}
+
+.timeline-nav-item.active 
+{
+  .timeline-nav-year {
+    transform: scale(1) translateY(0);
+  opacity: 1;
+  font-size: 120px;
+}
+  .timeline-nav-dot {
+    background: #fff;
   }
 }
 
-/* src/components/Portfolio/Portfolio.scss */
-#main.portfolio {
-  .vertical-bar {
-    &__panel-3 {
-      position: fixed;
-      right: 0;
-      opacity: 0.7;
-      // Remove any transform properties to ensure it stays fixed
-      transform: none !important;
-    }
+.timeline-nav-year {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.5;
+  // transition: all 0.45s ease;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: right;
+  width: 100%;
+
+  // font-size: 32px;                // base size
+  transform-origin: right center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.timeline-nav-item.neighbor .timeline-nav-year {
+  opacity: 0.8;
+  font-size: 32px;
+  transform: scale(1.2) translateY(0);
+}
+
+.timeline-nav-item.hidden .timeline-nav-year {
+  /* maybe scale down a lot */
+  transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .timeline-navigator {
+    left: 3%;
+    gap: 30px;
+  }
+
+  .timeline-nav-item.active .timeline-nav-year {
+    font-size: 20px;
+  }
+
+  .timeline-nav-year {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-navigator {
+    left: 20px;
+    gap: 25px;
+    // transform: translateY(-50%);
+  }
+
+  .timeline-nav-item {
+    gap: 15px;
+  }
+
+  .timeline-nav-item.active .timeline-nav-year {
+    font-size: 24px;
+  }
+
+  .timeline-nav-item.neighbor .timeline-nav-year {
+    font-size: 14px;
   }
 }

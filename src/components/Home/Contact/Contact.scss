@@ -1,0 +1,66 @@
+@import '../../../styles/__variables';
+.contact {
+    margin-bottom: -50px;
+  }
+  
+  .contact-about {
+    text-align: center;
+  }
+  
+  .lets-talk {
+    font-size: 140px;
+    margin-bottom: 0;
+    line-height: normal;
+    color: #222222;
+    font-weight: 700;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+   
+    a {
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    margin: 0 8px 0 0;
+    transition: 0.3s;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    width: 36px;
+    height: 36px;
+
+    i {
+      font-size: 24px;
+    }
+
+    &:hover {
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+}
+  
+  
+  @media (max-width: 768px) {
+    .lets-talk {
+      font-size: 80px;
+    }
+  
+    .social-links a {
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lets-talk {
+      font-size: 60px;
+    }
+  }

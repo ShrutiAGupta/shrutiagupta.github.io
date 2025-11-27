@@ -1,0 +1,552 @@
+// panel/Panel.scss
+
+// Keep the variable for reference, but don't use it for panel height
+$header-height: 60px;
+
+.panel {
+  position: relative;
+  height: 100vh; // Full viewport height, no adjustment
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  transition: opacity 0.8s ease;
+
+  // Fade out inactive panels slightly
+  &:not(.active) {
+    .year-text {
+      opacity: 0.3;
+    }
+  }
+}
+
+.panel-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+
+  // gradient overlay (this is your old effect)
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 25, 47, 0.85) 0%,
+      rgba(10, 25, 47, 0.7) 40%,
+      rgba(10, 25, 47, 0.9) 100%
+    );
+    pointer-events: none;
+  }
+}
+
+/* Shared style for both background layers */
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Current image: fade IN */
+.bg-layer-cur {
+  animation: bgFadeIn 0.6s ease forwards;
+}
+
+/* Previous image: fade OUT */
+.bg-layer-prev {
+  animation: bgFadeOut 0.6s ease forwards;
+}
+
+@keyframes bgFadeIn {
+  from { opacity: 0; transform: scale(1.02); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bgFadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.98); }
+}
+
+
+// Timeline line inside each panel
+.panel-timeline-line {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+// Small circle on the timeline
+.year-circle-container {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.year-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.panel-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  // align-items: center;
+  z-index: 2;
+}
+
+// Year text prominently on the left
+.year-text-container {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.year-text {
+  font-size: 120px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.8s ease;
+}
+
+// Items container
+.items-container {
+  margin-left: calc(30% + 100px);
+  width: calc(70% - 150px);
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.items-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  animation: fadeInUp 0.6s ease-out;
+  justify-content: start;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Individual item cards
+.item-card {
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.8s ease;
+  // width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  width: 150px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+    .item-image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.item-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.item-title {
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  letter-spacing: 0.3px;
+}
+
+// Responsive design
+@media (max-width: 1200px) {
+  .year-text {
+    font-size: 90px;
+  }
+
+  .items-container {
+    margin-left: calc(30% + 80px);
+    width: calc(70% - 120px);
+    padding: 0 40px;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    gap: 24px;
+    max-width: 800px;
+  }
+
+  .item-card {
+    min-width: 220px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .panel-timeline-line {
+    left: 50%;
+  }
+
+  .year-circle-container {
+    left: 50%;
+  }
+
+  .year-text-container {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .year-text {
+    font-size: 60px;
+  }
+
+  .items-container {
+    margin-left: 0;
+    margin-top: 150px;
+    width: 100%;
+    padding: 0 20px;
+    align-items: flex-start;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .item-card {
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   CAROUSEL CONTAINER
+=========================== */
+.carousel-container {
+  margin-left: calc(30% + 100px);
+  width: calc(70% - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+/* ===========================
+   CARD
+=========================== */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.card-subtitle {
+  color: #333;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.card-readmore {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 6px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ===========================
+   PAGINATION (UCLA style)
+=========================== */
+.carousel-pagination {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: white;
+
+  button {
+    background: none;
+    border: 1px solid white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    &:hover:not(:disabled) {
+      background: white;
+      color: #000;
+    }
+  }
+}
+
+/* ===========================
+   MODAL for “Read More”
+=========================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 32px;
+  max-width: 680px;
+  width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+.modal-details {
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.modal-close {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===========================
+   CLEAN CONTENT AREA
+=========================== */
+.clean-content {
+  margin-left: calc(30% + 100px);
+  max-width: 550px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top:10%;
+}
+
+/* TITLE */
+.clean-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* DESCRIPTION */
+.clean-desc {
+  font-size: 20px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* READ MORE */
+.clean-readmore {
+  color: #fff;
+  opacity: 0.9;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+/* ===========================
+   MINIMAL PAGINATION
+=========================== */
+.mini-pagination {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.arrow {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+}
+
+.page-indicator {
+  font-size: 17px;
+  opacity: 0.8;
+}
+
+/* ===========================
+   MODAL (same as before)
+=========================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 32px;
+  max-width: 680px;
+  width: 90%;
+  border-radius: 16px;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.modal-details {
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.modal-close {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}

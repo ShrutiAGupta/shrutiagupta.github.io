@@ -1,0 +1,20 @@
+.content{ 
+    white-space: pre-wrap;
+
+    .poetry-post-content img{
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media (max-width: 991px) {
+    .post .post-image {
+        max-width: 100% !important;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

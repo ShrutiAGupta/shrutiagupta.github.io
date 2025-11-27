@@ -1,0 +1,68 @@
+$bg-page: #050816;
+$bg-card: #0b1020;
+$text-main: #f9fafb;
+$text-muted: #9ca3af;
+
+.parallax-block {
+  position: relative;
+  min-height: 80vh;
+  padding: 4rem 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #020617 0%, #020617 40%, #030712 100%);
+
+  &__image {
+    flex: 1 1 40%;
+    height: 320px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-image: url("https://images.pexels.com/photos/34088/pexels-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+  }
+
+  &__content {
+    flex: 1 1 40%;
+    background: radial-gradient(circle at top left, #111827 0, #020617 85%);
+    border-radius: 1.5rem;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    color: $text-main;
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+  }
+
+  &__title {
+    margin: 0 0 0.75rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.03em;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: $text-muted;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 3rem 6vw;
+
+    &__image {
+      width: 100%;
+      height: 260px;
+    }
+
+    &__content {
+      width: 100%;
+    }
+  }
+}
