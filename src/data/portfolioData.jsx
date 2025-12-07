@@ -78,7 +78,7 @@ Showcased early interest in building integrated, user-centric systems.`,
   id: 8,
   title: "Expanded Client Work at ZS",
   description: `Worked across multiple pharma/healthcare programs in development, QA, analytics, and API architecture Improved release cycles, standardized documentation, and supported multi-region teams`,
-  image: "assets/img/portfolio/.JPG",
+  image: "assets/img/portfolio/12.JPG",
   link: "",
  },
  {
@@ -116,7 +116,7 @@ Collaborated across business, tech, and compliance teams to deliver large-scale 
   description: `Built a machine-learning recommender scoring foods based on nutrient value and “cancer-fighting” properties
 Designed full application: data processing, model training, and interface
 Published the research in an academic journal`,
-  image: "assets/img/portfolio/.JPG",
+  image: "assets/img/portfolio/11.png",
   link: "/project/food-recommender",
  },
  ],
@@ -187,7 +187,7 @@ Collaborated with PR, marketing, and logistics teams on event materials
 Assisted with overall execution of MIT WPU's annual technical fest
 Participated in community initiatives (plantation drives, donation drives, Teach for India activities).`,
   link: "",
-  image: "assets/img/portfolio/7.JPG",
+  image: "assets/img/portfolio/7.JPEG",
   link: "",
  },
  ],

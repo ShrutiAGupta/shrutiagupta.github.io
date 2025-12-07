@@ -8,7 +8,7 @@ import PoetryIndividual from "../Poetry/PoetryIndividual/PoetryIndividual";
 import Home from "../Home/Home";
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import Music from "../Music/Music";
-
+import UnderMaintenance from "../UnderMaintenance/UnderMaintenance";
 
 export const routerLinks = [
     { showOnNavbar: true, id: "hero", path: "/", label: "Home", type: "scroll", section: "hero" },
