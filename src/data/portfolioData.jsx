@@ -9,7 +9,7 @@ export const portfolioData = [
   description: `Began MBA with focus on healthcare, product strategy, and consulting
 Joined STAR, Healthcare Club, 100 Women at Carolina, and GIE global immersion programs
 Building advanced skills in strategy, financial modeling, and marketing`,
-  image: "assets/img/portfolio/1.JPG",
+  image: "/assets/img/portfolio/1.JPG",
   link: "",
  },
  {
@@ -17,7 +17,7 @@ Building advanced skills in strategy, financial modeling, and marketing`,
   title: "Petco Growth Strategy Project",
   description: `Conducting market, financial, and competitive analyses for Petco's subscription ecosystem Evaluating personalization, modular offerings, and customer needs to identify growth pathways
 Assessing economic viability and brand alignment`,
-  image: "assets/img/portfolio/2.JPG",
+  image: "/assets/img/portfolio/2.JPG",
   link: "/project/petco-growth-strategy",
  },
  {
@@ -26,7 +26,7 @@ Assessing economic viability and brand alignment`,
   description: `Developed commercialization strategy for extravasation-detection device
 Built pricing model, hospital stakeholder adoption map, and competitive positioning
 Created GTM plan focused on value, safety, and workflow integration`,
-  image: "assets/img/portfolio/2.JPG",
+  image: "/assets/img/portfolio/2.JPG",
   link: "/project/lucerno-case",
  },
  ],
@@ -41,7 +41,7 @@ Created GTM plan focused on value, safety, and workflow integration`,
   description: `Led compliance remediations across security, audit requirements, and process documentation
 Directed design-system alignment efforts to unify UI, workflows, and release standards
 Strengthened coordination across India, US, and EU teams`,
-  image: "assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.JPG",
   link: "",
  },
  ],
@@ -56,7 +56,7 @@ Strengthened coordination across India, US, and EU teams`,
   description: `Took ownership of end-to-end delivery for technical modules and client-facing updates
 Led development and QA workflows, implemented efficiency improvements, and reduced defect rates
 Mentored 100+ new hires across training programs and onboarding cohorts`,
-  image: "assets/img/portfolio/10.JPG",
+  image: "/assets/img/portfolio/10.JPG",
   link: "",
  },
  ],
@@ -71,21 +71,21 @@ Mentored 100+ new hires across training programs and onboarding cohorts`,
   description: `Designed a personal productivity system linking a pantry-tracking app with Notion databases
 Automated inventory management, tagging, and low-stock alerts using structured data flows
 Showcased early interest in building integrated, user-centric systems.`,
-  image: "assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.JPG",
   link: "/project/pantry-management",
  },
  {
   id: 8,
   title: "Expanded Client Work at ZS",
   description: `Worked across multiple pharma/healthcare programs in development, QA, analytics, and API architecture Improved release cycles, standardized documentation, and supported multi-region teams`,
-  image: "assets/img/portfolio/12.JPG",
+  image: "/assets/img/portfolio/12.JPG",
   link: "",
  },
  {
   id: 7,
   title: "ZS Cares - Logistics & Volunteer Coordination",
   description: `Helped organize and execute CSR events more efficiently`,
-  image: "assets/img/portfolio/5.JPG",
+  image: "/assets/img/portfolio/5.JPG",
   link: "",
  },
  ],
@@ -98,7 +98,7 @@ Showcased early interest in building integrated, user-centric systems.`,
   id: 5,
   title: "Graduated with B.Tech in Computer Science & Engineering",
   description: `Completed four-year degree with academic focus on ML, systems, and health-tech applications`,
-  image: "assets/img/portfolio/4.JPG",
+  image: "/assets/img/portfolio/4.JPG",
   link: "",
  },
  {
@@ -107,7 +107,7 @@ Showcased early interest in building integrated, user-centric systems.`,
   description: `Started first full-time role supporting global pharma clients across US, EU, and APAC
 Built data pipelines, UI modules, QA processes, and workflow automations
 Collaborated across business, tech, and compliance teams to deliver large-scale systems`,
-  image: "assets/img/portfolio/9.JPG",
+  image: "/assets/img/portfolio/9.JPG",
   link: "",
  },
  {
@@ -116,7 +116,7 @@ Collaborated across business, tech, and compliance teams to deliver large-scale 
   description: `Built a machine-learning recommender scoring foods based on nutrient value and “cancer-fighting” properties
 Designed full application: data processing, model training, and interface
 Published the research in an academic journal`,
-  image: "assets/img/portfolio/11.png",
+  image: "/assets/img/portfolio/11.png",
   link: "/project/food-recommender",
  },
  ],
@@ -132,7 +132,7 @@ Published the research in an academic journal`,
 Conducted analysis on how recessions are predicted
 Explored leading vs. lagging macroeconomic indicators
 Presented insights to peers — first exposure to data storytelling`,
-  image: "assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.JPG",
   link: "",
  },
  {
@@ -142,7 +142,7 @@ Presented insights to peers — first exposure to data storytelling`,
 Managed 100+ volunteers across PR, design, sponsorship, tech, and logistics teams
 Oversaw corporate partnerships, cross-department strategy, and event delivery
 Strengthened leadership, delegation, fiscal responsibility, and crisis management`,
-  image: "assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.JPG",
   link: "",
  },
  ],
@@ -159,7 +159,7 @@ Strengthened leadership, delegation, fiscal responsibility, and crisis managemen
 Managed volunteers, handled permits, vendor interaction, and on-ground operations
 Oversaw planning, scheduling, and inter-department collaboration
 Built strong leadership, communication, and operations management skills`,
-  image: "assets/img/portfolio/6.JPG",
+  image: "/assets/img/portfolio/6.JPG",
   link: "",
  },
  {
@@ -170,7 +170,7 @@ Built a prototype 911-style emergency telemedicine system for India
 Designed to deliver remote triage + basic guidance while the ambulance is en route
 Integrated sensors + ML classification to determine urgency
 Sparked early interest in healthcare + technology interdiv`,
-  image: "assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.JPG",
   link: "/project/baymax",
  }
  ],
@@ -187,7 +187,7 @@ Collaborated with PR, marketing, and logistics teams on event materials
 Assisted with overall execution of MIT WPU's annual technical fest
 Participated in community initiatives (plantation drives, donation drives, Teach for India activities).`,
   link: "",
-  image: "assets/img/portfolio/7.JPEG",
+  image: "/assets/img/portfolio/7.JPEG",
   link: "",
  },
  ],
@@ -203,7 +203,7 @@ Participated in community initiatives (plantation drives, donation drives, Teach
 Built foundation in programming, algorithms, systems, and AI/ML
 Joined technical clubs and early-stage project teams`,
   link: "mobile-app",
-  image: "assets/img/portfolio/3.JPEG",
+  image: "/assets/img/portfolio/3.JPEG",
   link: "",
  },
  ],
