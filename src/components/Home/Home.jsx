@@ -5,6 +5,7 @@ import BlogHome from "./BlogHome/BlogHome";
 import Skills from "./Skills/Skills";
 import Contact from "./Contact/Contact";
 import Footer from "../Shared/layout/Footer";
+import PortfolioHome from "./PortfolioHome/PortfolioHome";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
           <Me />
           </div>
           <Skills />
+          {/* <PortfolioHome /> */}
           <BlogHome />
           <Contact />
         </main>

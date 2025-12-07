@@ -4,6 +4,7 @@
   "homepage": "https://ShrutiAGupta.github.io",
   "private": true,
   "dependencies": {
+    "boxicons": "^2.1.4",
     "cra-template": "1.2.0",
     "gsap": "^3.12.5",
     "react": "^19.0.0",

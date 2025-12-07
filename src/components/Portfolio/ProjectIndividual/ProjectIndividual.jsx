@@ -28,7 +28,11 @@ const { slug } = useParams();
   // }, []);
   
   const projectDetails = projectDetailsData.find(post => post.link === slug);
-  const cleanHTML = projectDetails.content.replace(/\n+/g,'').replace(/\s{2,}/g,' ').trim();
+  const [cleanHTML,setContent] = useState("");
+  useEffect(() => {
+    fetch(projectDetails.content).then(res => res.text()).then(setContent);
+  }, [projectDetails.content])
+  // const cleanHTML = projectDetails.content.replace(/\n+/g,'').replace(/\s{2,}/g,' ').trim();
 
   if (!projectDetails) {
     navigate('/timeline');

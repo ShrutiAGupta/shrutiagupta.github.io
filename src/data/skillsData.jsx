@@ -1,4 +1,24 @@
 export const skillsData = [
+{
+      icon: 'bx bx-target-lock',
+      title: 'STRATEGIC MARKETING',
+      description: 'Developing go-to-market strategies, brand positioning, and data-driven campaigns from market research to performance optimization'
+    },
+    {
+      icon: 'bx bx-brain',
+      title: 'MANAGEMENT CONSULTING',
+      description: 'Solving complex business problems through analytical frameworks, stakeholder management, and strategic recommendations'
+    },
+    {
+      icon: 'bx bxs-network-chart',
+      title: 'BUSINESS STRATEGY',
+      description: 'Analyzing competitive landscapes and market dynamics to formulate long-term strategic plans and business models'
+    },
+    {
+      icon: 'bx bx-bar-chart-alt-2',
+      title: 'DATA-DRIVEN DECISION MAKING',
+      description: 'Leveraging analytics and customer insights to inform strategic choices and measure business impact'
+    },
     {
       icon: 'bx bx-code-alt',
       title: 'WEB APPLICATION DESIGN',
@@ -6,42 +26,17 @@ export const skillsData = [
     },
     {
       icon: 'bx bx-customize',
-      title: 'UI/UX DESIGN',
-      description: 'Creating intuitive and engaging user interfaces with Figma and Adobe XD'
-    },
-    {
-      icon: 'bx bx-pen',
-      title: 'GRAPHIC DESIGN',
-      description: 'Designing visually compelling graphics using Illustrator and Photoshop'
+      title: 'PRODUCT & EXPERIENCE DESIGN',
+      description: 'Creating user-centered interfaces and customer journeys that balance business objectives with user needs'
     },
     {
       icon: 'bx bxs-report',
-      title: 'DATA REPORTING & VISUALIZATION',
-      description: 'Developing interactive dashboards and reports using Power BI, Tableau, and Excel'
+      title: 'BUSINESS ANALYTICS & VISUALIZATION',
+      description: 'Transforming complex data into actionable insights through dashboards, reports, and statistical analysis'
     },
-    {
-      icon: 'bx bx-scatter-chart',
-      title: 'BIG DATA ANALYTICS',
-      description: 'Transforming complex datasets into actionable insights with R, and Python'
-    },
-    // {
-    //   icon: 'bi bi-card-checklist',
-    //   title: 'BRAND IDENTITY',
-    //   description: 'Developing cohesive and impactful brand identities using Illustrator, InDesign, and Spark'
-    // },
-    // {
-    //   icon: 'bx bx-camera',
-    //   title: 'PHOTOGRAPHY',
-    //   description: 'Capturing and editing stunning photographs with Lightroom and Photoshop.'
-    // },
     {
       icon: 'bx bx-cog',
-      title: 'PROJECT MANAGEMENT',
-      description: 'Streamlining workflows and delivering efficient solutions through strategic planning'
-    },
-    {
-      icon: 'bx bxl-aws',
-      title: 'CLOUD COMPUTING',
-      description: 'Developing scalable cloud based solutions using AWS Services'
+      title: 'STRATEGIC PROJECT LEADERSHIP',
+      description: 'Managing cross-functional initiatives from strategy and requirements through execution and delivery'
     }
   ];
