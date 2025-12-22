@@ -9,7 +9,7 @@ export const portfolioData = [
   description: `Began MBA with focus on healthcare, product strategy, and consulting
 Joined STAR, Healthcare Club, 100 Women at Carolina, and GIE global immersion programs
 Building advanced skills in strategy, financial modeling, and marketing`,
-  image: "/assets/img/portfolio/1.JPG",
+  image: "/assets/img/portfolio/1.jpg",
   link: "",
  },
  {
@@ -43,7 +43,7 @@ Created GTM plan focused on value, safety, and workflow integration`,
 //   description: `Led compliance remediations across security, audit requirements, and process documentation
 // Directed design-system alignment efforts to unify UI, workflows, and release standards
 // Strengthened coordination across India, US, and EU teams`,
-//   image: "/assets/img/portfolio/.JPG",
+//   image: "/assets/img/portfolio/.jpg",
 //   link: "",
 //  },
 //  ],
@@ -73,7 +73,7 @@ Mentored 100+ new hires across training programs and onboarding cohorts`,
   description: `Designed a personal productivity system linking a pantry-tracking app with Notion databases
 Automated inventory management, tagging, and low-stock alerts using structured data flows
 Showcased early interest in building integrated, user-centric systems.`,
-  image: "/assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.jpg",
   link: "",
   // link: "/project/pantry-management",
  },
@@ -81,14 +81,14 @@ Showcased early interest in building integrated, user-centric systems.`,
   id: 8,
   title: "Expanded Client Work at ZS",
   description: `Worked across multiple pharma/healthcare programs in development, QA, analytics, and API architecture Improved release cycles, standardized documentation, and supported multi-region teams`,
-  image: "/assets/img/portfolio/12.JPG",
+  image: "/assets/img/portfolio/12.jpg",
   link: "",
  },
  {
   id: 7,
   title: "ZS Cares - Logistics & Volunteer Coordination",
   description: `Helped organize and execute CSR events more efficiently`,
-  image: "/assets/img/portfolio/5.JPG",
+  image: "/assets/img/portfolio/5.jpg",
   link: "",
  },
  ],
@@ -101,7 +101,7 @@ Showcased early interest in building integrated, user-centric systems.`,
   id: 5,
   title: "Graduated with B.Tech in Computer Science & Engineering",
   description: `Completed four-year degree with academic focus on ML, systems, and health-tech applications`,
-  image: "/assets/img/portfolio/4.JPG",
+  image: "/assets/img/portfolio/4.jpg",
   link: "",
  },
  {
@@ -110,7 +110,7 @@ Showcased early interest in building integrated, user-centric systems.`,
   description: `Started first full-time role supporting global pharma clients across US, EU, and APAC
 Built data pipelines, UI modules, QA processes, and workflow automations
 Collaborated across business, tech, and compliance teams to deliver large-scale systems`,
-  image: "/assets/img/portfolio/9.JPG",
+  image: "/assets/img/portfolio/9.jpg",
   link: "",
  },
  {
@@ -135,7 +135,7 @@ Published the research in an academic journal`,
 Conducted analysis on how recessions are predicted
 Explored leading vs. lagging macroeconomic indicators
 Presented insights to peers — first exposure to data storytelling`,
-  image: "/assets/img/portfolio/.JPG",
+  image: "/assets/img/portfolio/.jpg",
   link: "",
  },
  {
@@ -145,7 +145,7 @@ Presented insights to peers — first exposure to data storytelling`,
 Managed 100+ volunteers across PR, design, sponsorship, tech, and logistics teams
 Oversaw corporate partnerships, cross-department strategy, and event delivery
 Strengthened leadership, delegation, fiscal responsibility, and crisis management`,
-  image: "/assets/img/portfolio/17.JPG",
+  image: "/assets/img/portfolio/17.jpg",
   link: "",
  },
  ],
@@ -162,7 +162,7 @@ Strengthened leadership, delegation, fiscal responsibility, and crisis managemen
 Managed volunteers, handled permits, vendor interaction, and on-ground operations
 Oversaw planning, scheduling, and inter-department collaboration
 Built strong leadership, communication, and operations management skills`,
-  image: "/assets/img/portfolio/6.JPG",
+  image: "/assets/img/portfolio/6.jpg",
   link: "",
  },
  {
