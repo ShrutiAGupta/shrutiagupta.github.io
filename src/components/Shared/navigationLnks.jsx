@@ -17,7 +17,7 @@ export const routerLinks = [
     { showOnNavbar: true, id: "timeline", path: "/timeline", label: "Timeline", type: "route", element: <Portfolio />},
     { showOnNavbar: true, id: "blog", path: "/blog", label: "Blog", type: "route", element:<Blog />},
     { showOnNavbar: true, id: "poetry",path: "/poetry",label: "Poetry",type: "route", element:<Poetry />},
-    { showOnNavbar: true, id: "photogallery",label: "Gallery",type: "route",path: "/photogallery", element:<PhotoGallery /> },
+    // { showOnNavbar: true, id: "photogallery",label: "Gallery",type: "route",path: "/photogallery", element:<PhotoGallery /> },
     { showOnNavbar: true, id: "music", path: "/music", label: "Music", type: "route", element:<Music /> },
     { showOnNavbar: false, id: "blogIndividual", path: "/blog/:slug", label: "BlogIndividual", type: "route", element:<BlogIndividual />},
     { showOnNavbar: false, id: "projectIndividual", path: "/project/:slug", label: "ProjectIndividual", type: "route", element:<ProjectIndividual />},
