@@ -308,9 +308,9 @@ const AlbumIndividual = ({
                     <i className="bx bx-skip-next text-5xl"></i>
                   </button>
 
-                  <div className="flex items-center gap-2 mt-4 px-4">
-                    <div className="relative">
                       {/* Sound Icon */}
+                  {/* <div className="flex items-center gap-2 mt-4 px-4">
+                    <div className="relative">
                       <button
                         onClick={() => setShowVolumeControl((prev) => !prev)}
                         className="p-2 rounded-full hover:bg-gray-200"
@@ -319,7 +319,6 @@ const AlbumIndividual = ({
                         <i className="bx bx-volume-full text-3xl"></i>
                       </button>
 
-                      {/* Volume Slider */}
                       {showVolumeControl && (
                         <div
                           ref={volumeRef}
@@ -339,7 +338,7 @@ const AlbumIndividual = ({
                         </div>
                       )}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             )}

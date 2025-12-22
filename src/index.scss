@@ -229,6 +229,23 @@ header.transparent-header,
   .img-fluid {
     filter: brightness(0) invert(1) sepia(1) saturate(0) brightness(1.2);
   }
+
+  .mobile-nav-toggle, .cross {
+    color: #fff;
+  }
+
+  .navbar-mobile {
+    background: #0d0a15 !important;
+  }
+
+  .navbar.navbar-mobile ul li:nth-child(1) {
+    border-top: 5px solid gray;
+  }
+
+      .navbar.navbar-mobile ul li {
+        border-bottom: 5px solid gray;
+    }
+
 }
 
 footer.transparent-footer,

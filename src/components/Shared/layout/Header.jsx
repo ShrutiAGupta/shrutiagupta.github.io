@@ -74,7 +74,7 @@ const Header = () => {
             </Link>
           </div>
           <button 
-            className="cross text-gray font-bold"
+            className="cross font-bold"
             onClick={() => setIsMenuOpen(false)}
           >
            <i className='bx bx-x'></i>
