@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import facebook_scraper; print\\(''''found''''\\)\")",
+      "Bash(pip show:*)",
+      "Bash(python -c \"from facebook_scraper import get_posts; posts = list\\(get_posts\\(''mahecwnc'', pages=10, cookies=''facebook_cookies.txt''\\)\\); print\\(len\\(posts\\)\\)\")"
+    ]
+  }
+}

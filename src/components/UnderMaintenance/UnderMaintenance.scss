@@ -1,0 +1,358 @@
+// Palette tuned for dark portfolio vibe
+$bg: #020617;
+$bg-elevated: rgba(15, 23, 42, 0.95);
+$border-subtle: rgba(148, 163, 184, 0.3);
+$text-main: #e5e7eb;
+$text-muted: #9ca3af;
+$accent: #38bdf8; // cyan-ish
+$accent-soft: rgba(56, 189, 248, 0.16);
+$accent-alt: #a855f7;
+
+// Layout
+.um {
+  position: relative;
+  min-height: 100vh;
+  padding: 2.5rem 1.75rem 2rem;
+  background: radial-gradient(circle at top, #0b1120 0, $bg 60%);
+  color: $text-main;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", sans-serif;
+
+  // soft blobs
+  &__blur {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.55;
+    pointer-events: none;
+    mix-blend-mode: screen;
+
+    &--one {
+      width: 260px;
+      height: 260px;
+      background: $accent-soft;
+      top: -40px;
+      left: -40px;
+    }
+
+    &--two {
+      width: 220px;
+      height: 220px;
+      background: rgba(168, 85, 247, 0.18);
+      bottom: -60px;
+      right: -40px;
+    }
+  }
+
+  // HEADER
+  &__header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__logo-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 20%, #1f2937, #020617);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__brand-name {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  &__brand-tagline {
+    font-size: 0.78rem;
+    color: $text-muted;
+  }
+
+  // MAIN
+  &__main {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+    gap: 2.5rem;
+    margin-top: 0.75rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  // LEFT CARD
+  &__card {
+    background: $bg-elevated;
+    border-radius: 1.75rem;
+    border: 1px solid $border-subtle;
+    padding: 2.1rem 2.3rem;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+
+    @media (max-width: 640px) {
+      padding: 1.6rem 1.7rem;
+    }
+  }
+
+  &__pill {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.28rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: rgba(15, 23, 42, 0.95);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $text-muted;
+  }
+
+  &__pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: $accent;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+  }
+
+  &__pill-label {
+    // class exists only in JSX; nothing special here but left for extension
+  }
+
+  &__title {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  &__title-dot {
+    color: $accent;
+  }
+
+  &__body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: $text-muted;
+    max-width: 34rem;
+  }
+
+  &__status-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.83rem;
+    color: $text-muted;
+  }
+
+  &__status-light {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: $accent;
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.9);
+    animation: um-pulse 1.7s ease-in-out infinite;
+  }
+
+  &__status-text {
+    // placeholder for extra styling
+  }
+
+  // TIMELINE
+  &__timeline {
+    margin-top: 0.4rem;
+    border-left: 1px dashed rgba(55, 65, 81, 0.9);
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  &__timeline-item {
+    position: relative;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    &--active {
+      opacity: 1;
+
+      .um__timeline-title {
+        color: $accent;
+      }
+    }
+  }
+
+  &__timeline-bullet {
+    position: absolute;
+    left: -1.95rem;
+    top: 0.35rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: $bg;
+    border: 2px solid $accent;
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.7);
+  }
+
+  &__timeline-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &__timeline-sub {
+    font-size: 0.8rem;
+    color: $text-muted;
+  }
+
+  &__footer-text {
+    margin-top: 0.4rem;
+    font-size: 0.82rem;
+    color: $text-muted;
+
+    a {
+      color: $accent;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(56, 189, 248, 0.7);
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+  }
+
+  // RIGHT META COLUMN
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__meta-card {
+    background: radial-gradient(circle at top left, rgba(15, 23, 42, 1), #020617);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(31, 41, 55, 0.9);
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.75);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  &__meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: $text-muted;
+  }
+
+  &__meta-value {
+    font-size: 0.9rem;
+  }
+
+  &__equalizer {
+    margin-top: 0.4rem;
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-end;
+    height: 18px;
+
+    span {
+      flex: 1;
+      border-radius: 999px;
+      background: linear-gradient(180deg, $accent, $accent-alt);
+      animation: um-bars 1.4s ease-in-out infinite;
+      transform-origin: bottom;
+
+      &:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.34s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  // FOOTER
+  &__footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: rgba(148, 163, 184, 0.85);
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  }
+
+  &__footer-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.7);
+  }
+}
+
+// ANIMATIONS
+@keyframes um-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+@keyframes um-bars {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}

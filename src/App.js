@@ -1,80 +1,54 @@
 // src/App.jsx
-import React, { useEffect } from 'react';
-import { useActiveSection } from './context/ActiveSectionContext';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useActiveSection } from "./context/ActiveSectionContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./hooks/scrollToTop";
+import Header from "./components/Shared/layout/Header";
+import Footer from "./components/Shared/layout/Footer";
+import "./App.scss";
 
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import Hero from './components/Hero/Hero';
-import Skills from './components/Skills/Skills';
-import Blog from './components/Blog/Blog';
-import Resume from './components/Resume/Resume';
-import Testimonials from './components/Testimonials/Testimonials';
-import Contact from './components/Contact/Contact';
-import About from './components/About/About';
-import './App.scss';
+import Home from "./components/Home/Home";
+import UnderMaintenance from "./components/UnderMaintenance/UnderMaintenance";
+import { routerLinks } from "./components/Shared/navigationLnks";
 
-import Portfolio from './components/Portfolio/Portfolio';
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="main-content">{children}</div>
+      <Footer />
+    </>
+  );
+};
 
-const App = () => {
-  const { setActiveSection } = useActiveSection();
+function App() {
+  const [first, ...rest] = routerLinks;
+  const UnderMaintenanceEnabled = false; // flip to true when needed
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'resume', 'blog', 'testimonials', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop && 
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [setActiveSection]);
-
-    return (
+  return (
+    // <Router>
+      // <ScrollToTop />
       <Routes>
-        <Route 
-          path="/" 
-          element={
-            <div className="main-content">
-              <Hero />
-              <Header />
-              <main id="main">
-                <About />
-                <Skills />
-                <Resume />
-                <Blog />
-                <Testimonials />
-                <Contact />
-              </main>
-              <Footer />
-            </div>
-          } 
-        />
-        <Route
-        path="/portfolio"
-        element={
-          <div className="main-content">
-          {/* <Header /> */}
-          <Portfolio />
-          <Footer />
-          </div>
-          } />
+        {UnderMaintenanceEnabled ? (
+          // Maintenance mode: catch-all route
+          <Route path="*" element={<UnderMaintenance />} />
+        ) : (
+          <>
+            {/* First route (e.g., home) */}
+            <Route path={"/"} element={<Home />} />
+
+            {/* Rest of the routes */}
+            {rest.map((item) => (
+              <Route
+                key={item.id}
+                path={item.path}
+                element={<Layout>{item.element}</Layout>}
+              />
+            ))}
+          </>
+        )}
       </Routes>
-    );
-  }
-  
+  );
+}
 
 export default App;

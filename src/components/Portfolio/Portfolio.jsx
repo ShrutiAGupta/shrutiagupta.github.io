@@ -1,96 +1,47 @@
-// src/components/Portfolio/Portfolio.jsx
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import './Portfolio.scss';
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
+import PortfolioCard from '../Home/PortfolioHome/PortfolioCard';
+// import '../Home/PortfolioHome/PortfolioHome.scss';
+// import './Portfolio.scss';
+// import { portfolioPosts, monthFeaturedportfolio, featuredportfolio } from '../../data/portfolioData';
+import { projectDetailsData } from '../../data/timelineData';
 
 const Portfolio = () => {
-  const containerRef = useRef(null);
 
-  useEffect(() => {
-    // Add body class
-    document.body.classList.add('portfolio-1');
+  const portfolios = projectDetailsData.filter((p) => p.visible).map((e) => ({ descriptionPlacement: 'bottom', ...e }));
 
-    // GSAP animations
-    const sections = gsap.utils.toArray(".panel");
-    const container = containerRef.current;
+  // const mainPanel = {
+  //   ...portfolios.find((e) => e.link === featuredportfolio),
+  //   classes: 'full main',
+  //   descriptionPlacement: 'right',
+  // };
+  
+  // const rightPanel = portfolios
+  //   .filter((e) => monthFeaturedportfolio.includes(e.link))
+  //   .map((el) => ({ classes: 'full', ...el }));
+  
+  // const belowPanel = portfolios
+  //   .slice(0, 3).sort((x, y)=> new Date(y.date) - new Date(x.date));
 
-    const scrollTween = gsap.to(sections, {
-      x: () => -(container.scrollWidth - window.innerWidth - document.querySelector('.vertical-bar')?.offsetWidth * 3 - 15),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".container",
-        end: "+=9000",
-        scrub: 1,
-        pin: true,
-        invalidateOnRefresh: true
-      },
-    });
-
-    gsap.to('.vertical-bar__panel-2', {
-      x: () => -(window.innerWidth - document.querySelector('.vertical-bar')?.offsetWidth * 3 - 15),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.panel.panel-2',
-        containerAnimation: scrollTween,
-        start: () => 'left-=15px right-=' + (document.querySelector('.vertical-bar')?.offsetWidth * 2 + 15),
-        end: () => 'left-=15px left+=' + document.querySelector('.vertical-bar')?.offsetWidth,
-        scrub: true,
-        invalidateOnRefresh: true
-      }
-    });
-
-    // Cleanup
-    return () => {
-      document.body.classList.remove('portfolio-1');
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
-  return (
-    <main id="main" className="portfolio">
-      <div className="container" ref={containerRef}>
-        <div className="panel panel-1">
-          <section className="portfolio-details">
-            <div className="portfolio-details-container">
-              {/* Add your portfolio content here */}
+    return (
+        <section id="blog" className="text-left paddsection section-bg">
+          <div className="container">
+            <div className="section-title text-center">
+              <h2>PORTFOLIO</h2>
             </div>
-          </section>
+          </div>
+    
+          <div className="panel-wrapper flex justify-between flex-row flex-wrap">
+        <div className="left-panel md:w-full">
+          <div className="flex flex-wrap">
+            {portfolios.map((post, index) => (
+              <PortfolioCard key={index} parent='home' post={post} />
+              // <div>Try</div>
+            ))}
+          </div>
         </div>
-        <div className="panel panel-2">
-          <section className="portfolio-details">
-            <div className="portfolio-details-container">
-              {/* Add your portfolio content here */}
-            </div>
-          </section>
-        </div>
-        <div className="panel panel-3" >
-          <section className="portfolio-details">
-            <div className="portfolio-details-container">
-              {/* Add your portfolio content here */}
-            </div>
-          </section>
-        </div>
-        {/* Repeat for panel-2 and panel-3 */}
       </div>
-      
-      <nav className="sidebars">
-        <ul className="sidebars__list">
-          <li className="vertical-bar vertical-bar__panel-1">
-            <span className="rotate-90">Panel-1</span>
-          </li>
-          <li className="vertical-bar vertical-bar__panel-2">
-            <span className="rotate-90">Panel-2</span>
-          </li>
-          <li className="vertical-bar vertical-bar__panel-3">
-            <span className="rotate-90">Panel-3</span>
-          </li>
-        </ul>
-      </nav>
-    </main>
-  );
+        </section>
+      );
 };
 
 export default Portfolio;

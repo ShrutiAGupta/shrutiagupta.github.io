@@ -1,0 +1,15 @@
+.music-container {
+  background: rgba(13, 10, 21);
+}
+
+.music-hero {
+  background-image: url("../../../public/assets/img/music-cover.jpg");
+}
+
+.music-container-cover {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 10, 21, 0.6),
+    rgba(13, 8, 22, 0.6)
+  ) !important;
+}

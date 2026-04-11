@@ -1,0 +1,35 @@
+#poetry {
+  .poetry-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, calc((100vw - var(--sidebar-width, 0px)) / 6));
+    width: 100%;
+  }
+
+  .poetry-card {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .poetry-card--placeholder {
+    // background: #e0e0e0;
+  }
+
+  .poetry-overlay {
+    max-width: inherit;
+    max-height: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .poetry-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: none;
+      grid-auto-rows: calc(100vw / 3);
+    }
+
+    .poetry-card {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }
+}
