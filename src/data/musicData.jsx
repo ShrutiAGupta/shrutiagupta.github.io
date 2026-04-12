@@ -25,6 +25,26 @@ export const musicData = {
       },   
     ],
   },
+    'Bottom of Things': {
+    albumCoverImage: "assets/img/music/bottom_of_things.jpg",
+    albumDescription: "",
+    albumBackground: '#463442',
+    albumTitleShade: '#ded0da',
+    songs: [
+      {
+        songName: "I Know Better",
+        songId: 2,
+        songFile: "assets/audio/songs/i_know_better.mp3",
+        length: 2.51,
+      },
+      {
+        songName: "Even Here",
+        songId: 1,
+        songFile: "assets/audio/songs/even_here.m4a",
+        length: 2.55,
+      },  
+    ],
+  },
   // 'Dusk: Promise of Dawn': {
   //   albumCoverImage: "assets/img/music/dusk2dawn.jpg",
   //   albumDescription: "",

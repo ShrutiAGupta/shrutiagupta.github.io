@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './blog.css';
 
 const HERO = "/assets/img/blog/building-personal-website.PNG";
 
@@ -72,12 +73,12 @@ export default function BuildingPersonalWebsite() {
 
       <article className="bpw-root">
         {/* Hero */}
-        <div className="bpw-hero">
+        <div className="bl-hero-b">
           <img src={HERO} alt="Building a personal website" className="bpw-hero-img" />
-          <div className="bpw-hero-overlay">
-            <p className="bpw-tag">Tech · June 28, 2021</p>
-            <h1>Ready to Claim Your Corner of the Internet?</h1>
-            <p className="bpw-meta">5 min read</p>
+          <div className="bl-hero-b-overlay bl-hero-overlay">
+            <p className="bl-tag-b">Tech · June 28, 2021</p>
+            <h1 className="bpw-hero-h1">Building a Website That <em>Feels Like You</em></h1>
+            {/* <p className="bpw-meta">5 min read</p> */}
           </div>
         </div>
 
@@ -122,54 +123,28 @@ export default function BuildingPersonalWebsite() {
 }
 
 const css = `
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
   .bpw-root {
     color: #1a1a1a;
     background: #faf9f7;
     min-height: 100vh;
   }
 
-  .bpw-hero {
-    position: relative;
-    height: 100vh;
-    min-height: 420px;
-    overflow: hidden;
-  }
+  /* filter override for this blog's cover image */
+  .bpw-hero-img { filter: brightness(0.55); }
 
-  .bpw-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.55);
-  }
-
-  .bpw-hero-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 3rem clamp(1.5rem, 6vw, 6rem) 3.5rem;
-  }
-
-  .bpw-tag {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 0.75rem;
-  }
-
-  .bpw-hero h1 {
-    font-family: 'DM Sans', sans-serif;
+  .bpw-hero-h1 {
+    font-family: 'Lora', serif;
     font-size: clamp(1.8rem, 5vw, 3.5rem);
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
     max-width: 680px;
     margin: 0 0 1rem;
+
+    em {
+    font-style: italic;
+    color: #c8a96e;
+  }
   }
 
   .bpw-meta {

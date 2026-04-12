@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./styles/__variables";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 /* Your existing CSS */
 body {
@@ -275,4 +276,9 @@ footer.transparent-footer,
   background: #010101 !important;
   z-index: 100;
   color: #ffffff !important;
+}
+
+
+.lora-heading {
+  font-family: 'Lora', serif;
 }

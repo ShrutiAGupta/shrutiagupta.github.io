@@ -20,7 +20,11 @@ const Blog = () => {
   
   const belowPanel = blogs
     .filter((e) => e.link !== featuredBlog && !monthFeaturedBlog.includes(e.link))
-    .slice(0, 3).sort((x, y)=> new Date(y.date) - new Date(x.date));
+    .sort((x, y)=> new Date(y.date) - new Date(x.date));
+
+    console.log('mainPanel', mainPanel);
+    console.log('rightPanel', rightPanel);
+    console.log('belowPanel', belowPanel);  
 
     return (
         <section id="blog" className="text-left paddsection section-bg">

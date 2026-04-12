@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './blog.css';
 
 const steps = [
   {
@@ -83,47 +84,16 @@ export default function WritingABook() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
-
         .wab-root {
           color: #1a1a1a;
           background: #faf9f7;
           min-height: 100vh;
         }
 
-        .wab-hero {
-          position: relative;
-          height: 100vh;
-          min-height: 420px;
-          overflow: hidden;
-        }
+        /* filter override for this blog's cover image */
+        .wab-hero-img { filter: brightness(0.6); }
 
-        .wab-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: brightness(0.6);
-        }
-
-        .wab-hero-overlay {
-          position: absolute;
-          inset: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          padding: 3rem clamp(1.5rem, 6vw, 6rem) 3.5rem;
-        }
-
-        .wab-tag {
-          font-size: 0.7rem;
-          font-weight: 500;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          color: rgba(255,255,255,0.7);
-          margin-bottom: 0.75rem;
-        }
-
-        .wab-hero h1 {
+        .wab-hero-h1 {
           font-family: 'Lora', serif;
           font-size: clamp(2rem, 5vw, 3.75rem);
           font-weight: 600;
@@ -131,13 +101,6 @@ export default function WritingABook() {
           line-height: 1.15;
           max-width: 720px;
           margin: 0 0 1rem;
-        }
-
-        .wab-meta {
-          font-size: 0.8rem;
-          color: rgba(255,255,255,0.55);
-          font-weight: 300;
-          letter-spacing: 0.04em;
         }
 
         .wab-body {
@@ -204,7 +167,7 @@ export default function WritingABook() {
 
         .wab-inline-img img {
           width: 100%;
-          height: 260px;
+          height: 350px;
           object-fit: cover;
           display: block;
           filter: brightness(0.95) saturate(0.9);
@@ -235,15 +198,16 @@ export default function WritingABook() {
 
       <article className="wab-root">
         {/* Hero */}
-        <div className="wab-hero">
+        <div className="bl-hero-b">
           <img
             src="/assets/img/blog/book/hero.PNG"
             alt="Writer at a desk in soft light"
+            className="wab-hero-img"
           />
-          <div className="wab-hero-overlay">
-            <p className="wab-tag">Creative · May 12, 2023</p>
-            <h1>Dreams to Pages: A Book Writing Guide</h1>
-            <p className="wab-meta">5 min read</p>
+          <div className="bl-hero-b-overlay bl-hero-overlay">
+            <p className="bl-tag-b">Creative · May 12, 2023</p>
+            <h1 className="wab-hero-h1">Dreams to Pages: A Book Writing Guide</h1>
+            {/* <p className="wab-meta">5 min read</p> */}
           </div>
         </div>
 

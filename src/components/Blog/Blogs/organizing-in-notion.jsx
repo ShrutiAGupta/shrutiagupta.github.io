@@ -16,7 +16,7 @@ const OrganizingInNotion = () => {
         <div className="ng-hero-content">
           <span className="ng-eyebrow">Productivity</span>
           <h1 className="ng-h1">
-            One App.<br />Your Entire Life.
+            One App. <br/> <em>Your Entire Life.</em>
           </h1>
           <p className="ng-subhead">
             A guide to getting organized with Notion — and actually staying that way.
@@ -282,6 +282,11 @@ const css = `
     color: #f5f2ec;
     margin: 0 0 20px;
     letter-spacing: -0.02em;
+
+    em {
+    font-style: italic;
+    color: #c8a96e;
+  }
   }
 
   .ng-subhead {

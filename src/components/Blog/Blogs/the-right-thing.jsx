@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './blog.css';
 
 const HERO = "/assets/img/blog/the-right-thing.jpg";
 
@@ -67,16 +68,16 @@ export default function TheRightThing() {
       <article className="rtt-root">
 
         {/* HERO */}
-        <section className="rtt-hero">
+        <section className="rtt-hero bl-hero">
           <img
             ref={heroRef}
             src={HERO}
             alt="Philosophy — the right thing"
-            className="rtt-hero-img"
+            className="bl-hero-img rtt-hero-img"
           />
-          <div className="rtt-hero-overlay" />
-          <div className="rtt-hero-content">
-            <span className="rtt-tag">Philosophy · Nov 28, 2022</span>
+          <div className="bl-hero-overlay" />
+          <div className="bl-hero-content">
+            <span className="bl-tag" style={{ fontStyle: 'normal' }}>Philosophy · Nov 28, 2022</span>
             <h1>Is the right thing <em>bigger</em> than all of us?</h1>
             <p className="rtt-hero-meta">What exactly are the dimensions of right? And who decides them?</p>
           </div>
@@ -132,7 +133,12 @@ function AnimatedSection({ children, className }) {
 }
 
 const css = `
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+  /* rtt-hero-img: parallax overrides on top of bl-hero-img base */
+  .rtt-hero-img {
+    height: 120%;
+    will-change: transform;
+    filter: brightness(0.6);
+  }
 
   .rtt-root {
     color: #1a1714;
@@ -140,50 +146,8 @@ const css = `
     line-height: 1.8;
   }
 
-  /* HERO */
-  .rtt-hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .rtt-hero-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 120%;
-    object-fit: cover;
-    will-change: transform;
-    filter: brightness(0.6);
-  }
-
-  .rtt-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(15,12,9,0.88) 0%, rgba(15,12,9,0.1) 55%, transparent 100%);
-  }
-
-  .rtt-hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 0 clamp(1.5rem, 6vw, 6rem) clamp(2rem, 7vh, 5rem);
-    max-width: 860px;
-  }
-
-  .rtt-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #c8a96e;
-    margin-bottom: 1.2rem;
-  }
-
   .rtt-hero h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: clamp(2.4rem, 6vw, 5rem);
     font-weight: 300;
     line-height: 1.1;
@@ -208,7 +172,7 @@ const css = `
     max-width: 900px;
     margin: 0 auto;
     padding: clamp(2.5rem, 7vh, 5rem) clamp(1.5rem, 5vw, 3rem) clamp(2rem, 5vh, 3.5rem);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: clamp(1.15rem, 2vw, 1.4rem);
     font-weight: 300;
     font-style: italic;
@@ -236,7 +200,7 @@ const css = `
   }
 
   .rtt-h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: clamp(1.4rem, 2.8vw, 1.9rem);
     font-weight: 400;
     color: #1a1714;
@@ -285,7 +249,7 @@ const css = `
   }
 
   .rtt-pull {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-size: clamp(1.1rem, 2.2vw, 1.45rem);
     font-style: italic;
     font-weight: 300;

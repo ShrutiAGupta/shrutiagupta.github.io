@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ─────────────────────────────────────────────
+   SHARED BLOG STYLES
+   Prefix: bl-  (blog)
+   ───────────────────────────────────────────── */
+
+/* === ROOT === */
+
+/* Used by: even-here, i-know-better, six-layers */
+.bl-root {
+  color: #1a1410;
+  background: #f7f3ee;
+  min-height: 100vh;
+  line-height: 1.8;
+}
+
+/* ─────────────────────────────────────────────
+   HERO — Pattern A
+   Flex container · absolute image · gradient overlay
+   Used by: even-here, i-know-better, six-layers, the-right-thing
+   ───────────────────────────────────────────── */
+
+.bl-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bl-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bl-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: #00000042;
+  /* background: linear-gradient(to top, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.1) 55%, transparent 100%); */
+}
+
+/* Content block sits at the bottom via flex */
+.bl-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(1.5rem, 6vw, 6rem) clamp(2.5rem, 7vh, 5rem);
+  max-width: 860px;
+}
+
+/* ─────────────────────────────────────────────
+   HERO — Pattern B
+   In-flow image · absolute overlay as flex container
+   Used by: be-a-well, building-personal-website, writing-a-book
+   ───────────────────────────────────────────── */
+
+.bl-hero-b {
+  position: relative;
+  height: 100vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.bl-hero-b img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bl-hero-b-overlay {
+  /* background: #00000042; */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem clamp(1.5rem, 6vw, 6rem) 3.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   HERO TEXT
+   ───────────────────────────────────────────── */
+
+/* Gold italic eyebrow — narrative / editorial blogs */
+.bl-tag {
+  display: inline-block;
+  font-family: 'Lora', serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 1.2rem;
+}
+
+/* White semi-transparent eyebrow — guide blogs */
+.bl-tag-b {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.75rem;
+}
+
+/* Narrative hero title */
+.bl-h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #f7f3ee;
+  margin: 0 0 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.bl-h1 em {
+  font-style: italic;
+  color: #c8a96e;
+}
+
+/* Hero subtitle / teaser */
+.bl-hero-meta {
+  font-family: 'Lora', serif;
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  font-style: italic;
+  color: rgba(247,243,238,0.6);
+  max-width: 560px;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────────────
+   BODY
+   Used fully by: even-here, i-know-better, six-layers
+   ───────────────────────────────────────────── */
+
+.bl-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vh, 5.5rem) clamp(1.5rem, 5vw, 2rem) clamp(5rem, 12vh, 8rem);
+}
+
+/* Opening italic paragraph with bottom rule */
+.bl-intro {
+  font-family: 'Lora', serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #3d3530;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(200,169,110,0.3);
+  padding-bottom: 2.5rem;
+}
+
+/* Body paragraph — scroll-reveal via IntersectionObserver */
+.bl-p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #3d3530;
+  font-weight: 400;
+  margin: 0 0 1.6em;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.bl-p.bl-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ornamental section divider  ✦  */
+.bl-rule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 52px 0;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bl-rule.bl-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bl-rule::before,
+.bl-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d4c9be;
+}
+
+.bl-rule span {
+  color: #b8924a;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  opacity: 0.7;
+}
+
+/* Animated content section */
+.bl-section {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.bl-section.bl-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cascade reveal to paragraphs when parent section appears */
+.bl-section.bl-visible .bl-p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section heading */
+.bl-h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1410;
+  margin: 0 0 1.2rem;
+  line-height: 1.3;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(200,169,110,0.3);
+}
+
+/* Pull quote */
+.bl-pull {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-style: italic;
+  font-weight: 400;
+  color: #8b3a2a;
+  text-align: center;
+  padding: 1.75rem 1.5rem;
+  margin: 2.5rem 0;
+  border-top: 1px solid rgba(200,169,110,0.35);
+  border-bottom: 1px solid rgba(200,169,110,0.35);
+  line-height: 1.55;
+}
+
+/* Closing paragraph */
+.bl-closing {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.85;
+  color: #3d3530;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #d4c9be;
+  font-weight: 400;
+}
+
+/* Footer label row */
+.bl-footer-note {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #7a6e68;
+  text-align: center;
+  margin-top: 2.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .bl-body { padding: 2.5rem 1.25rem 5rem; }
+  .bl-pull { padding: 1.5rem 1rem; }
+}

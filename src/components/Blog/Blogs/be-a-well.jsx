@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './blog.css';
 
 const paragraphs = [
   "Ever catch yourself turning a simple task into an epic quest? That was me, meticulously trying to cover every possible angle, every potential scenario, every little detail until what started as a straightforward project had somehow morphed into an ocean of complexity.",
@@ -31,47 +32,16 @@ export default function BeAWell() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
-
         .baw-root {
           color: #1a1a1a;
           background: #faf9f7;
           min-height: 100vh;
         }
 
-        .baw-hero {
-          position: relative;
-          height: 100vh;
-          min-height: 420px;
-          overflow: hidden;
-        }
+        /* bl-hero-b img filter override */
+        .bl-hero-b img { filter: brightness(0.55); }
 
-        .baw-hero img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: brightness(0.55);
-        }
-
-        .baw-hero-overlay {
-          position: absolute;
-          inset: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          padding: 3rem clamp(1.5rem, 6vw, 6rem) 3.5rem;
-        }
-
-        .baw-tag {
-          font-size: 0.7rem;
-          font-weight: 500;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          color: rgba(255,255,255,0.7);
-          margin-bottom: 0.75rem;
-        }
-
-        .baw-hero h1 {
+        .baw-hero-h1 {
           font-family: 'Lora', serif;
           font-size: clamp(1.8rem, 5vw, 3.5rem);
           font-weight: 600;
@@ -79,13 +49,6 @@ export default function BeAWell() {
           line-height: 1.2;
           max-width: 680px;
           margin: 0 0 1rem;
-        }
-
-        .baw-meta {
-          font-size: 0.8rem;
-          color: rgba(255,255,255,0.55);
-          font-weight: 300;
-          letter-spacing: 0.04em;
         }
 
         .baw-body {
@@ -146,15 +109,15 @@ export default function BeAWell() {
       `}</style>
 
       <article className="baw-root">
-        <div className="baw-hero">
+        <div className="bl-hero-b">
           <img
             src="/assets/img/blog/be-a-well.jpg"
             alt="A quiet well surrounded by nature"
           />
-          <div className="baw-hero-overlay">
-            <p className="baw-tag">Philosophy · December 2, 2024</p>
-            <h1>Don't Be an Ocean, Just Be a Nice Well</h1>
-            <p className="baw-meta">3 min read</p>
+          <div className="bl-hero-b-overlay bl-hero-overlay">
+            <p className="bl-tag-b">Philosophy · December 2, 2024</p>
+            <h1 className="baw-hero-h1 bl-h1">Don't Be an Ocean, <em>Just Be a Nice Well</em></h1>
+            {/* <p className="baw-meta">3 min read</p> */}
           </div>
         </div>
 

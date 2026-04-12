@@ -16,7 +16,9 @@ const BlogCard = ({ parent, post, highlight }) => {
           <h4 className="lora-heading">
           <Link to={`/blog/${post.link}`}>{post.title}</Link>
           </h4>
-              <p className="separator overflow-hidden m-0">{post.description}</p>
+              <p className="separator overflow-hidden m-0" title={post.description}>
+                {post.description}
+              </p>
             </div>
           <div className='mt-2'>           
           {parent === "blog" && (
