@@ -259,9 +259,9 @@ export const timelineData = [
 export const projectDetailsData = [
   {
  link: "catchr",
- title: "Case Study: Catchr Browser Extension for Job Application Management",
+ title: "Project: Catchr Browser Extension for Job Application Management",
  date: "",
- image: "/assets/img/timeline/15.png",
+ image: "/assets/img/timeline/19.png",
  visible: true,
  element: <CatchrProject />,
  content: ``,
@@ -282,13 +282,7 @@ export const projectDetailsData = [
  image: "",
  visible: false,
  element: <PantryProject />,
- content: `Hey there, future website owner! Tired of letting your amazing content live only on social media? Let's create something that's truly yours – a website that shows off exactly who you are and what you do. Don't worry if you've never built a website before – I'll walk you through it, no tech wizard hat required!
-First Things First: What's Your Vision?
-Before we dive into the fun stuff, let's dream a little! Take a moment to imagine your perfect website:
-
-What amazing things do you want to share with the world?
-Who are the awesome people you want to reach?
-What kind of content makes you excited to create?`,
+ content: ``,
   },
   {
  link: "lucerno-case",
@@ -310,7 +304,7 @@ What kind of content makes you excited to create?`,
   },
   {
  link: "baymax",
- title: "Project: “Baymax” Emergency Teledoc Project",
+ title: "Project: “Baymax” Emergency Teledoc",
  date: "",
  image: "/assets/img/timeline/13.png",
  visible: true,
@@ -319,4 +313,4 @@ What kind of content makes you excited to create?`,
   },
 ];
 
-export const homeFeature = ['petco-growth-strategy'];
+export const homeFeature = ['petco-growth-strategy', 'catchr'];

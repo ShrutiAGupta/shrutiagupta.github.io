@@ -38,15 +38,14 @@ const KeyLearningsSection = () => {
         <ul className="list-disc list-inside text-lg text-white space-y-2">
           <li>
             Iterative design and peer feedback sharpened strategic
-            RECOMMENDATIONS.
+            recommendations.
           </li>
           <li>
             Aligning fragmented initiatives into cohesive customer experience is
             crucial.
           </li>
           <li>
-            Balancing innovation with operational feasibility ensures practical
-            RECOMMENDATIONS.
+            Balancing innovation with operational feasibility ensures practical recommendations.
           </li>
         </ul>
       </motion.div>
