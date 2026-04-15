@@ -3,6 +3,7 @@ import PantryProject from "../components/Portfolio/portfolios/pantry/pantry";
 import LucernoProject from "../components/Portfolio/portfolios/lucerno/lucerno";
 import BaymaxProject from "../components/Portfolio/portfolios/baymax/baymax";
 import FoodrecProject from "../components/Portfolio/portfolios/foodrec/foodrec";
+import CatchrProject from "../components/Portfolio/portfolios/catchr/catchr";
 import { image, title } from "framer-motion/client";
 
 
@@ -257,6 +258,15 @@ export const timelineData = [
 
 export const projectDetailsData = [
   {
+ link: "catchr",
+ title: "Case Study: Catchr Browser Extension for Job Application Management",
+ date: "",
+ image: "/assets/img/timeline/15.png",
+ visible: true,
+ element: <CatchrProject />,
+ content: ``,
+  },
+  {
  link: "petco-growth-strategy",
  title: "Case Study: Petco Growth Strategy Project",
  date: "",
@@ -291,19 +301,19 @@ What kind of content makes you excited to create?`,
   },
   {
  link: "food-recommender",
- title: "Case Study: Personalized Cancer-Preventive Food Recommender",
+ title: "Project: Personalized Cancer-Preventive Food Recommender",
  date: "",
  image: "/assets/img/timeline/18.png",
- visible: false,
+ visible: true,
  element: <FoodrecProject />,
  content: '/assets/timeline-projects/foodRecommender.html',
   },
   {
  link: "baymax",
- title: "Case Study: “Baymax” Emergency Teledoc Project",
+ title: "Project: “Baymax” Emergency Teledoc Project",
  date: "",
  image: "/assets/img/timeline/13.png",
- visible: false,
+ visible: true,
  element: <BaymaxProject />,
  content: ``,
   },
