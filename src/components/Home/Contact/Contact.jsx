@@ -11,14 +11,14 @@ const Contact = () => {
             <div className="contact-about">
               <p className="lets-talk">Shruti Gupta</p>
               <div className="flex social-links justify-start">
-                {/* <a 
+                <a 
                   href="https://github.com/ShrutiAGupta" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="github"
                 >
                   <i className="bx bxl-github"></i>
-                </a> */}
+                </a>
                 <a 
                   href="https://www.linkedin.com/in/shruti-a-gupta/" 
                   target="_blank" 
