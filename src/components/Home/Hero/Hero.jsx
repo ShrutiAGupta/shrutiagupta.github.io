@@ -27,7 +27,7 @@ const Hero = () => {
   return (
 <section id="hero" className="relative w-full h-screen">
   <img className="absolute w-full h-full object-cover hero-image" />
-  <div className="absolute inset-0 bg-gradient-to-b from-[rgb(0,54,188,0.3)] to-[rgb(0,0,0,0.82)]" />
+  <div className="absolute inset-0 bg-gradient-to-b from-[rgb(0,54,188,0.3)] to-[rgb(0,0,0,0.82)] bg-overlay-hero" />
   <div className="relative z-10 h-full flex flex-col items-center justify-center hero-content ">
     <h1>Hi, I'm Shruti!</h1>
     {/* <h2>Strategies on the clock, stories off it</h2> */}
