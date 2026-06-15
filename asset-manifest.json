@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.11c70360.css",
-    "main.js": "/static/js/main.a40b312d.js",
+    "main.js": "/static/js/main.9002e9b5.js",
     "static/media/hero.JPG": "/static/media/hero.f4db5ef7c8b5f84156d1.JPG",
     "static/media/music-cover.jpg": "/static/media/music-cover.e1496e3304f1d13dd3ce.jpg",
     "index.html": "/index.html"
   },
   "entrypoints": [
     "static/css/main.11c70360.css",
-    "static/js/main.a40b312d.js"
+    "static/js/main.9002e9b5.js"
   ]
 }
