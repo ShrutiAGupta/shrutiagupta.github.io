@@ -6,8 +6,19 @@ import BuildingPersonalWebsite from '../components/Blog/Blogs/building-personal-
 import SixLayersOfCommunication from '../components/Blog/Blogs/six-layers-of-communication';
 import IKnowBetter from '../components/Blog/Blogs/i-know-better';
 import EvenHere from '../components/Blog/Blogs/even-here';
+import TheThroughLine from '../components/Blog/Blogs/the-through-line';
 
 export const blogPosts = [
+        {
+        date: '2026-04-12',
+        tags: ['leadership'],
+        image: '/assets/img/blog/the-through-line.jpg',
+        title: 'The Through-Line',
+        description: 'A conversation with a second-year MBA student who taught me that a winding path and a clear purpose are not contradictions.',
+        element: <TheThroughLine />,
+        visible: true,
+        link: 'the-through-line',
+    },
     {
         date: '2026-04-12',
         tags: ['philosophy'],
@@ -95,6 +106,6 @@ export const blogPosts = [
 }
 ];
 
-export const featuredBlog = 'even-here';
+export const featuredBlog = 'the-through-line';
 export const monthFeaturedBlog = ['six-layers-of-communication', 'i-know-better'];
 export const homeFeature = ['be-a-well', 'organizing-in-notion', 'writing-a-book'];

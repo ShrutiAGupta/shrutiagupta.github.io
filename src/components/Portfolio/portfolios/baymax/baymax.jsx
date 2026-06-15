@@ -178,8 +178,7 @@ const HeroSection = () => (
         className="text-xl font-light max-w-xl mb-12"
         style={{ color: "rgba(255,255,255,0.65)" }}
       >
-        Your personal healthcare companion — a full-featured telehealth platform
-        designed and engineered from scratch by one person.
+        A full-stack telehealth platform — appointments, emergency dispatch, real-time doctor messaging, and everything in between.
       </motion.p>
 
       {/* Meta pills */}

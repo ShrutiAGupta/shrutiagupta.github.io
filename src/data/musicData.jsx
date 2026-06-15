@@ -25,24 +25,45 @@ export const musicData = {
       },   
     ],
   },
-    'Bottom of Things': {
-    albumCoverImage: "assets/img/music/bottom_of_things.jpg",
+    'Drowning in My Depth': {
+    albumCoverImage: "assets/img/music/drowning_in_my_depth.jpg",
     albumDescription: "",
     albumBackground: '#463442',
     albumTitleShade: '#ded0da',
     songs: [
       {
         songName: "I Know Better",
-        songId: 2,
-        songFile: "assets/audio/songs/i_know_better.mp3",
+        songId: 1,
+        songFile: "assets/audio/songs/i_know_better.m4a",
         length: 2.51,
       },
       {
         songName: "Even Here",
-        songId: 1,
+        songId: 2,
         songFile: "assets/audio/songs/even_here.m4a",
         length: 2.55,
-      },  
+      }, 
+      {
+        songName: "Fortress",
+        songId: 3,
+        songFile: "assets/audio/songs/fortress.m4a",
+        length: 4.09,
+      },   
+    ],
+  },
+    'Views of Horizon': {
+    albumCoverImage: "assets/img/music/views_of_horizon.jpg",
+    albumDescription: "",
+    albumBackground: 'rgb(57 26 19)',
+    albumTitleShade: '#f0a876',
+    songs: [
+      {
+        songName: "Shape of You",
+        songId: 1,
+        songFile: "assets/audio/songs/shape_of_you.m4a",
+        length: 3.01,
+      },
+      
     ],
   },
   // 'Dusk: Promise of Dawn': {
