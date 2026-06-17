@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./AlbumIndividual.scss";
+import LyricsPanel from "../LyricsPanel/LyricsPanel";
 
 const AlbumIndividual = ({
   index,
@@ -64,6 +65,30 @@ const AlbumIndividual = ({
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
     };
   }, [currentSong]);
+
+  const [lyricsOpen, setLyricsOpen] = useState(false);
+  const hasLyrics = !!(currentSong?.lyrics?.length);
+
+  useEffect(() => {
+    if (!hasLyrics) setLyricsOpen(false);
+  }, [hasLyrics]);
+
+  // Set transition once on mount so both open and close animate properly
+  useEffect(() => {
+    const container = document.querySelector(".music-container");
+    if (!container) return;
+    container.style.transition = "padding-right 0.42s cubic-bezier(0.4, 0, 0.2, 1)";
+    return () => {
+      container.style.transition = "";
+      container.style.paddingRight = "";
+    };
+  }, []);
+
+  useEffect(() => {
+    const container = document.querySelector(".music-container");
+    if (!container) return;
+    container.style.paddingRight = lyricsOpen ? "380px" : "";
+  }, [lyricsOpen]);
 
   const [showVolumeControl, setShowVolumeControl] = useState(false);
   const volumeRef = useRef();
@@ -175,6 +200,7 @@ const AlbumIndividual = ({
   };
 
   return (
+    <>
     <div
       className={`single-album py-20 flex w-full justify-between flex-col ${
         index % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -279,7 +305,7 @@ const AlbumIndividual = ({
                   {formatTime(duration)}
                 </div>
 
-                <div className="flex gap-4 justify-center items-center ">
+                <div className="relative flex gap-4 justify-center items-center">
                   <button
                     className="flex items-center justify-center bg-none border-none cursor-pointer p-2 rounded-full transition-all duration-200 ease-in-out hover:bg-gray-200 "
                     onClick={handlePrevious}
@@ -306,6 +332,16 @@ const AlbumIndividual = ({
                     aria-label="Next song"
                   >
                     <i className="bx bx-skip-next text-5xl"></i>
+                  </button>
+
+                  <button
+                    className={`lyrics-btn absolute right-0 flex items-center justify-center p-2 rounded-full transition-all duration-200 ease-in-out${hasLyrics ? " hover:bg-gray-200" : " opacity-30 cursor-not-allowed"}${lyricsOpen ? " lyrics-btn--active" : ""}`}
+                    onClick={() => hasLyrics && setLyricsOpen((prev) => !prev)}
+                    aria-label={lyricsOpen ? "Hide lyrics" : "Show lyrics"}
+                    disabled={!hasLyrics}
+                    title={hasLyrics ? "Lyrics" : "No lyrics available"}
+                  >
+                    <i className={`bx ${lyricsOpen ? "bxs-detail" : "bx-detail"} text-3xl`} />
                   </button>
 
                       {/* Sound Icon */}
@@ -346,6 +382,23 @@ const AlbumIndividual = ({
         </div>
       </div>
     </div>
+
+    <LyricsPanel
+      isOpen={lyricsOpen}
+      onClose={() => setLyricsOpen(false)}
+      song={currentSong}
+      currentTime={currentTime}
+      accentColor={albumData.albumTitleShade}
+      bgColor={albumData.albumBackground}
+      isPlaying={isLocalPlaying}
+      onSeek={(time) => {
+        if (audioRef.current) {
+          audioRef.current.currentTime = time;
+          setCurrentTime(time);
+        }
+      }}
+    />
+  </>
   );
 };
 
